@@ -5,5 +5,7 @@ public class Woo {
 
 	}
 
-	public static tapMech()
+	public static tapMech(){
+		
+	}
 }

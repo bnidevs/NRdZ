@@ -3,6 +3,8 @@ public abstract class Powerup{
 	public String name;
 	public int multiplier;
 	public String symbol;
+	public int refreshTime;
+	public int timer;
 
 	public abstract void modifier();
 

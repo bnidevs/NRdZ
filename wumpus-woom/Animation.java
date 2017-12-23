@@ -10,6 +10,7 @@ public class Animation{
 		String testtxt5 = "";
 		String testtxt6 = "";
 
+		//some text that prints like shapes
 		testtxt1 += terminalCenter("------------------\n|                |\n|                |\n------------------\n");
 
 		testtxt2 += terminalCenter("  ------------\n /\\           \\ \n/  \\           \\ \n----------------\n");
@@ -32,7 +33,7 @@ public class Animation{
 		sleeperPrinter(testtxtarr, 250, 20);
 	}
 
-	public static void sleeperPrinter(ArrayList<String> inStrArr, int time, int rptns){
+	public static void sleeperPrinter(ArrayList<String> inStrArr, int time, int rptns){ //prints all strings in [inStrArr] with a delay of [time] milliseconds [rptns] number of times
 		for(int i = 0; i < rptns; i++){
 			for(String el : inStrArr){
 				System.out.print(el);
@@ -45,7 +46,7 @@ public class Animation{
 		}
 	}
 
-	public static String textRepeater(String rptStr, int rptns){
+	public static String textRepeater(String rptStr, int rptns){ //repeats a string a certain amt of times
 		String rtrnStr = new String();
 		for(int i = 0; i < rptns; i++){
 			rtrnStr += rptStr;
@@ -53,13 +54,13 @@ public class Animation{
 		return rtrnStr;
 	}
 
-	public static String terminalCenter(String input){
+	public static String terminalCenter(String input){ // centers text in a 80*24 default terminal window
 		String rtrnStr = "";
 		String[] inputArr = stringSplitter(input);
 		int nLCount = 0;
 		int spaceCt;
 		for(String el : inputArr){
-			if(el.equals("\n")){
+			if(el.equals("\n")){     //counts newlines and centers vertically
 				nLCount += 1;
 			}
 		}
@@ -68,7 +69,7 @@ public class Animation{
 		spaceCt = inputArr[0].length();
 		for(String el : inputArr){
 			if(el.length() > spaceCt){
-				spaceCt = el.length();
+				spaceCt = el.length();    //counts width and centers horizontally
 			}
 		}
 		spaceCt = (80 - spaceCt) / 2;

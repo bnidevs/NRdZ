@@ -7,8 +7,8 @@ public class Woo {
 		Keyboard.readString();
 	}
 
-	// public static tapMech(){
+	public static void tapMech(){
 		
-	// }
+	}
 
 }

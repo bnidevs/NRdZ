@@ -15,12 +15,15 @@ public int level(){ //accessor for level
         return _level;
 }
 
-public String upgradeLevel(){ //accessor for upgrade tier
+public String upgrade(){ //accessor for upgrade tier
         return _upgrade;
 }
 
 public void levelUp(){ //level up
         _level++;
+}
+
+public void upgradeUp(){ //level up for upgrade tiers
 }
 
 }

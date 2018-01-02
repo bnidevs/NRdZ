@@ -9,10 +9,6 @@ public Helper(){//default constructor
         _upgrade = "0";
 }
 
-public String toString(){
-        return upgrade();
-}
-
 public String name(){ //accessor for name
         return _name;
 }
@@ -37,12 +33,17 @@ public void upgradeUp(){ //level up for upgrade tiers
         _upgrade += "I"; //add another I at the end
 }
 
-/*==============TEST CODE========
-   public static void main(String[] args) {
-          Helper max = new Helper();
-          max.upgradeUp();
-          max.upgradeUp();
-          System.out.println(max);
-   }
-   =========================*/
+public Object[] stats(){ //returns the stats of a Helper
+        Object[] stats = {name(), level(), upgrade()};
+        return stats;
+}
+
+public static void main(String[] args) {
+        //testing code
+        Helper max = new Helper();
+        max.upgradeUp();
+        max.upgradeUp();
+        max.stats(); //for checking to see if the stats actually works
+}
+
 }

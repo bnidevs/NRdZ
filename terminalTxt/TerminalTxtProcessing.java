@@ -1,4 +1,4 @@
-package helper;
+package terminalTxt;
 
 public class TerminalTxtProcessing{
 	public static void main(String[] args){}

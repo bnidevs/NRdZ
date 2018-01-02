@@ -1,5 +1,5 @@
 import cs1.Keyboard;
-import helper.TerminalTxtProcessing;
+import terminalTxt.TerminalTxtProcessing;
 
 public class Woo {
 	public static void main(String[] args) {

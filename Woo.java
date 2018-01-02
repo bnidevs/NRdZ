@@ -1,9 +1,9 @@
-import java.util.Scanner;
+import cs1.Keyboard;
 
 public class Woo {
 	public static void main(String[] args) {
-		System.out.println(terminalCenter("                 WELCOME TO\n /¯\\  /¯\\ |    |¯\\ |¯¯¯ | |\\  | /¯\\ |¯¯ |¯¯\\\n|  _ |   ||    |  ||--  | | \\ ||  _ |-- |--/\n \\_/  \\_/ |___ |_/ |    | |  \\| \\_/ |__ |  \\\n\n\n\n             Tap ENTER to start"));
-		System.in.read();
+		System.out.println(terminalCenter("                 WELCOME TO\n /¯\\  /¯\\ |    |¯\\ |¯¯¯ | |\\  | /¯\\ |¯¯ |¯¯\\\n|  _ |   ||    |  ||--  | | \\ ||  _ |-- |--/\n \\_/  \\_/ |___ |_/ |    | |  \\| \\_/ |__ |  \\\n\n\n\n        Tap ANY KEY + ENTER to start"));
+		Keyboard.readString();
 	}
 
 	// public static tapMech(){

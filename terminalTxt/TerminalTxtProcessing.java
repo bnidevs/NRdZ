@@ -1,7 +1,30 @@
 package terminalTxt;
 
+import java.util.ArrayList;
+
 public class TerminalTxtProcessing{
 	public static void main(String[] args){}
+
+	public static void sleeperPrinter(ArrayList<String> inStrArr, int time, int rptns){ //prints all strings in [inStrArr] with a delay of [time] milliseconds [rptns] number of times
+		for(int i = 0; i < rptns; i++){
+			for(String el : inStrArr){
+				System.out.print(el);
+				try{
+					Thread.sleep(time);
+				}catch(InterruptedException ex){
+					Thread.currentThread().interrupt();
+				}
+			}
+		}
+	}
+
+	public static String textRepeater(String rptStr, int rptns){ //repeats a string a certain amt of times
+		String rtrnStr = new String();
+		for(int i = 0; i < rptns; i++){
+			rtrnStr += rptStr;
+		}
+		return rtrnStr;
+	}
 
 	public static String terminalCenter(String input){ // centers text in a 80*24 default terminal window
 		String rtrnStr = "";
@@ -37,13 +60,5 @@ public class TerminalTxtProcessing{
 			rtrnArr[i] = inStr.substring(i,i+1);
 		}
 		return rtrnArr;
-	}
-
-	public static String textRepeater(String rptStr, int rptns){ //repeats a string a certain amt of times
-		String rtrnStr = new String();
-		for(int i = 0; i < rptns; i++){
-			rtrnStr += rptStr;
-		}
-		return rtrnStr;
 	}
 }

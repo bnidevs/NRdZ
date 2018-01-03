@@ -5,9 +5,9 @@ protected int _level;
 protected String _upgrade; //upgrades cap at tier III
 
 protected int _baseGold; //base value of the gold
-protected int _additionGold = 0; //addition bonus recieved from upgrades
-protected int _multiGold = 1; //multiplier bonus recieved from upgrades
-protected int _totalGold = 0; //overall gold collected by this Helper in this cycle
+protected int _additionGold; //addition bonus recieved from upgrades
+protected int _multiGold; //multiplier bonus recieved from upgrades
+protected int _totalGold; //overall gold collected by this Helper in this cycle
 
 public Helper(){ //initialize everything
         _level = 1;

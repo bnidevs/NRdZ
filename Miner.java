@@ -1,5 +1,8 @@
 public class Miner extends Helper {
+
 public Miner(){
-        this();
+        super();
+        _baseGold = 2;
 }
-}
+
+}//end class Miner

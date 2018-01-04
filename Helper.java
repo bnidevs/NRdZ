@@ -4,18 +4,9 @@ protected String _name;
 protected int _level;
 protected String _upgrade; //upgrades cap at tier III
 
-protected int _baseGold; //base value of the gold
-protected int _additionGold; //addition bonus recieved from upgrades
-protected int _multiGold; //multiplier bonus recieved from upgrades
-protected int _totalGold; //overall gold collected by this Helper in this cycle
-
 public Helper(){ //initialize everything
         _level = 1;
         _upgrade = "0";
-        _baseGold = 1;
-        _additionGold = 0;
-        _multiGold = 1;
-        _totalGold = 0;
 }
 
 public String name(){ //accessor for name
@@ -43,22 +34,17 @@ public void upgradeUp(){ //level up for upgrade tiers
         _upgrade += "I"; //add another I at the end
 }
 
-public Object[] stats(){ //returns the stats of a Helper in a 1-D array
-        Object[] stats = {name(), level(), upgrade()};
+public String[] stats(){ //returns the stats of a Helper in a 1-D array
+        String[] stats = {name(), Integer.toString( level() ), upgrade()};
         return stats;
-}
-
-public void produceGold(){ //the Helper produces gold
-//to be coded --> dependent on BN's implementation
-//will it be called immediately after the appropriate key is pushed?
 }
 
 public static void main(String[] args) {
         //testing code
-        Helper max = new Helper();
-        max.upgradeUp();
-        max.upgradeUp();
-        max.stats(); //for checking to see if the stats actually works
+        //Helper max = new Helper();
+        //max.upgradeUp();
+        //max.upgradeUp();
+        //max.stats(); //for checking to see if the stats actually works
 }
 
-}
+}//end class Helper

@@ -1,4 +1,4 @@
-public class Helper {
+public abstract class Helper {
 
 protected String _name;
 protected int _level;

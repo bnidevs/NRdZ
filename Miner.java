@@ -2,8 +2,8 @@
 public class Miner extends Helper {
 
 private int _baseGoldPS;   //base value of the gold
-private int _additionGoldPS;   //addition bonus recieved from upgrades
-private int _multiGoldPS;   //multiplier bonus recieved from upgrades
+private int _additionGoldPS;   //addition bonus received from upgrades
+private int _multiGoldPS;   //multiplier bonus received from upgrades
 
 public Miner(){
         super();

@@ -2,8 +2,8 @@
 public class Engineer extends Helper {
 
 private int _baseGoldPKP;   //base value of the gold
-private int _additionGoldPKP;   //addition bonus recieved from upgrades
-private int _multiGoldPKP;   //multiplier bonus recieved from upgrades
+private int _additionGoldPKP;   //addition bonus received from upgrades
+private int _multiGoldPKP;   //multiplier bonus received from upgrades
 
 public Engineer(){   //set level to 1 and upgrade to 0
         super();

@@ -5,6 +5,7 @@ private final int _glevel;
 
 public Gambler(){
         super();
+        _luck = 0;
         _glevel = _level;
 }
 

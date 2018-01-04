@@ -10,13 +10,17 @@ public class Woo {
 	public static double _multiGoldPKP = 1.0;
 	public static int _totalGoldPKP = (int)((_baseGoldPKP + _additiveGoldPKP) * _multiGoldPKP);
 
+	public static int _additiveGoldPS = 0;
+	public static double _multiGoldPS = 1.0;
+	public static int _totalGoldPS = (int)(_additiveGoldPS * _multiGoldPS);
+
 	public static String keyPress;
 
 	public static boolean gameMainScreen;
 
 	public static void main(String[] args) {
 		System.out.println(TerminalTxtProcessing.terminalCenter("                 WELCOME TO\n /¯\\  /¯\\ |    |¯\\ |¯¯¯ | |\\  | /¯\\ |¯¯ |¯¯\\\n|  _ |   ||    |  ||--  | | \\ ||  _ |-- |--/\n \\_/  \\_/ |___ |_/ |    | |  \\| \\_/ |__ |  \\\n\n\n\n        Tap SPACE + ENTER to start"));
-		Keyboard.readString();
+		tapMech();
 
 		ArrayList<String> testtxtarr = new ArrayList<String>();
 

@@ -3,7 +3,16 @@ import terminalTxt.TerminalTxtProcessing;
 import java.util.ArrayList;
 
 public class Woo {
-	public int _gold = 0;
+	public static int _gold = 0;
+
+	public static final int _baseGoldPKP = 1;
+	public static int _additiveGoldPKP = 0;
+	public static double _multiGoldPKP = 1.0;
+	public static int _totalGoldPKP = (int)((_baseGoldPKP + _additiveGoldPKP) * _multiGoldPKP);
+
+	public static String keyPress;
+
+	public static boolean gameMainScreen;
 
 	public static void main(String[] args) {
 		System.out.println(TerminalTxtProcessing.terminalCenter("                 WELCOME TO\n /¯\\  /¯\\ |    |¯\\ |¯¯¯ | |\\  | /¯\\ |¯¯ |¯¯\\\n|  _ |   ||    |  ||--  | | \\ ||  _ |-- |--/\n \\_/  \\_/ |___ |_/ |    | |  \\| \\_/ |__ |  \\\n\n\n\n        Tap SPACE + ENTER to start"));
@@ -43,11 +52,43 @@ public class Woo {
 			testtxtarr.set(i,testtxtarr.get(i).substring(0,10) + ("                                YOUR FIRST GOLD!\n") + testtxtarr.get(i).substring(10));
 		}
 
-		TerminalTxtProcessing.sleeperPrinter(testtxtarr, 250, 5);
+		TerminalTxtProcessing.sleeperPrinter(testtxtarr, 250, 3);
+
+		for(int i = 0; i < testtxtarr.size(); i++){
+			testtxtarr.set(i,testtxtarr.get(i).substring(0,10) + ("                    Keep pressing SPACE + ENTER to make more\n") + testtxtarr.get(i).substring(59));
+		}
+
+		TerminalTxtProcessing.sleeperPrinter(testtxtarr, 250, 1);
+
+		for(int i = 0; i < 5; i++){
+			testtxtarr.remove(0);
+		}
+		testtxtarr.add("\n\n\n\n\n              ------\n             /     /\\\n             --------" + TerminalTxtProcessing.textRepeater("\n", 17));
+		testtxtarr.add("   \n" + _gold + " [GOLD]" + TerminalTxtProcessing.textRepeater("\n", 23));
+
+		TerminalTxtProcessing.sleeperPrinter(testtxtarr, 250, 1);
+
+		testtxtarr.remove(0);
+		testtxtarr.remove(0);
+
+		gameMainScreen = true;
+
+		while(gameMainScreen = true){
+			tapMech();
+			testtxtarr.set(0, testtxtarr.get(0).substring(4) + _gold + " [GOLD]" + TerminalTxtProcessing.textRepeater("\n", 23));
+			TerminalTxtProcessing.sleeperPrinter(testtxtarr, 0, 1);
+		}
 	}
 
 	public static void tapMech(){
-		if(Keyboard.readString().equals(" "));
+		_totalGoldPKP = (int)((_baseGoldPKP + _additiveGoldPKP) * _multiGoldPKP);
+		keyPress = Keyboard.readString();
+		if (keyPress.equals(" ")){
+			_gold += _totalGoldPKP;
+		}else if (keyPress.equals("Q")){
+			gameMainScreen = false;
+			System.exit(0);
+		}
 	}
 
 }

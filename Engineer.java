@@ -23,4 +23,12 @@ public double multiGold(){ //accessor for the multiplier variable
         return _multiGoldPKP;
 }
 
+public void addMutate( int addend ){ //modifies the addition variable
+        _additionGoldPKP += addend;
+}
+
+public void multiMutate( int multi){ //modifies the multi variable
+        _multiGoldPKP += multi;
+}
+
 }//end class Engineer

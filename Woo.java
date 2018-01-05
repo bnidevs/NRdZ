@@ -81,7 +81,14 @@ public class Woo {
 			if(_gold == 30){
 				testtxtarr.remove(0);
 
-				
+				testtxtarr.add(TerminalTxtProcessing.terminalCenter("You can use gold to buy miners\n\n          ,-¯¯¯¯¯¯¯¯¯-_\n         / /\\ \\¯¯¯¯¯¯¯\n        / /  \\ \\\n       / /    \\ \\\n       ¯¯      \\ \\\n                \\ \\\n                 ¯¯\n"));
+				testtxtarr.add(TerminalTxtProcessing.terminalCenter("You can use gold to buy engineers\n\n              /| |\\\n              \\¯¯¯/\n               | |\n               | |\n               | |\n               | |\n               | |\n               | |\n              /___\\\n              \\| |/"));
+				testtxtarr.add(TerminalTxtProcessing.terminalCenter("You can also use gold to buy gamblers\n\n            /\\¯¯¯¯¯¯¯\\\n           /  \\  .    \\\n          /    \\    .  \\\n         /  .   \\       \\\n         \\      /¯¯¯----------\n          \\    /   |  .    .  |\n           \\  / .  |          |\n            \\/_____|  .    .  |\n                   |          |\n                    ----------"));
+				testtxtarr.add(TerminalTxtProcessing.terminalCenter("And powerups!\n       ____\n      |    |\n      |    |\n      |    |\n \\¯¯¯¯     |\n  \\        |\n   \\    |¯¯\n    \\   |\n     \\  |\n      \\ |\n       \\|"));
+				testtxtarr.add(TerminalTxtProcessing.terminalCenter("Press S + ENTER to see what the Shop has"));
+
+				TerminalTxtProcessing.sleeperPrinter(testtxtarr, 3000, 1);
+				tapMech();
 			}else{
 				tapMech();
 				testtxtarr.set(0, testtxtarr.get(0).substring(4) + _gold + " [GOLD]" + TerminalTxtProcessing.textRepeater("\n", 22));

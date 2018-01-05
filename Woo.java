@@ -78,9 +78,15 @@ public class Woo {
 		gameMainScreen = true;
 
 		while(gameMainScreen = true){
-			tapMech();
-			testtxtarr.set(0, testtxtarr.get(0).substring(4) + _gold + " [GOLD]" + TerminalTxtProcessing.textRepeater("\n", 22));
-			System.out.println(testtxtarr.get(0));
+			if(_gold == 30){
+				testtxtarr.remove(0);
+
+				
+			}else{
+				tapMech();
+				testtxtarr.set(0, testtxtarr.get(0).substring(4) + _gold + " [GOLD]" + TerminalTxtProcessing.textRepeater("\n", 22));
+				System.out.println(testtxtarr.get(0));
+			}
 		}
 	}
 

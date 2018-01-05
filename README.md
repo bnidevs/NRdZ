@@ -1,5 +1,5 @@
 # NRdZ
-### [Our proposal](../proposal.pdf)
+### [Our proposal](./proposal.pdf)
 ---
 ## DEVLOG
 

@@ -1,8 +1,14 @@
 # NRdZ
+## Bill Ni, Raunak Chowdhury, Maggie Zhao 
 ### [Our proposal](./proposal.pdf)
 ---
 ## DEVLOG
 
+This project simulates the mechanics of the games Tap Titans and Cookie Clicker, with the theme AdVenture Capitalist. The primary objective here is to create a corporate empire with hundreds of Helpers and to amass lots of gold, while staving off natural disasters and robberies.
+
+Instructions:
+
+---
 12/20 	
 - The NRdZ were created.
 

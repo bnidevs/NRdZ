@@ -10,10 +10,10 @@ This project simulates the mechanics of the games Tap Titans and Cookie Clicker,
 User starts off on main screen, which will show total gold, total stats from helper, and instructions on how to obtain gold, access store, etc. 
 Press [space] and [enter] for gold.
 Press [S] and [enter] for store. 
-	- Will bring user to a separate page, which shows available helpers, upgrades, levels, 
+- Will bring user to a separate page, which shows available helpers, upgrades, levels, 
 and power ups available for purchase. Each possible purchase will be linked to a separate key.
 Press [Q] and [enter] for sorting.
-	- Will display a table based on a 2D array of helpers with their attributes. Can be 
+- Will display a table based on a 2D array of helpers with their attributes. Can be 
 viewed in ascending or descending order as specified.
 Additional instructions will be given on screen if necessary.
 

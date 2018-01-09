@@ -81,7 +81,7 @@ public class UserInterface {
 	}
 
 	public static void helpUI(){
-		System.out.println("[R]eturn\n\nMiners produce gold based on time.\n\nEngineers give your SPACE + ENTERs more gold.\n\nGamblers increase your chance of winning the lottery.\nYou have a 1/2000 base chance of winning the lottery every second.\n\nEarthquakes, thunderstorms and bankruptcies are also random events.\nEach has a 1/1000 chance per second of occuring.\n\nEarthquakes kill 1/4 of your miners at random.\nThunderstorms kill 1/4 of your engineers at random.\nBankruptcies kill 1/4 of your gamblers at random.\n\nA robbery has a 1/10000 chance of occuring per second.\nA robbery empties the bank of all your gold.\n\n\n\n\n\n\n");
+		System.out.println("[R]eturn\n\nMiners produce gold based on time.\n\nEngineers give your SPACE + ENTERs more gold.\n\nGamblers increase your chance of winning the lottery.\nYou have a 1/2000 base chance of winning the lottery every second.\n\nEarthquakes, thunderstorms and bankruptcies are also random events.\nEach has a 1/1000 chance per second of occuring.\n\nEarthquakes kill 1/4 of your miners at random.\nThunderstorms kill 1/4 of your engineers at random.\nBankruptcies kill 1/4 of your gamblers at random.\n\nA robbery has a 1/10000 chance of occuring per second.\nA robbery empties the bank of all your gold.\n\n\n\n\n");
 	}
 
 }//end class UserInterface

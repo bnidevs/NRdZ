@@ -52,12 +52,12 @@ public class Woo {
 		keyPress = Keyboard.readString();
 		if (keyPress.equals(" ")){
 			_gold += _totalGoldPKP;
-		}else if (keyPress.equals("Q")){
+		}else if (keyPress.equals("Q") || keyPress.equals("q")){
 			status = false;
 			System.exit(0);
-		}else if (keyPress.equals("H")){
+		}else if (keyPress.equals("H") || keyPress.equals("h")){
 			gameScreen = "help";
-		}else if (keyPress.equals("R")){
+		}else if (keyPress.equals("R") || keyPress.equals("r")){
 			gameScreen = "main";
 		}
 	}

@@ -10,8 +10,8 @@ This project simulates the mechanics of the games Tap Titans and Cookie Clicker,
 
 #### Instructions: 
 After opening the terminal and cloning the repo- 
-1. Type <javac Woo.java > to compile the program.
-1. Type <java Woo > to run the program.
+1. Type `javac Woo.java` to compile the program.
+1. Type `java Woo` to run the program.
 	
 Inside the program- 
 

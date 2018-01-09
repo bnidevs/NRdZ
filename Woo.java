@@ -59,6 +59,18 @@ public class Woo {
 			gameScreen = "help";
 		}else if (keyPress.equals("R") || keyPress.equals("r")){
 			gameScreen = "main";
+		}else if (keyPress.equals("S") || keyPress.equals("s")){
+			gameScreen = "store";
+		}else if (keyPress.equals("I") || keyPress.equals("i")){
+			gameScreen = "inventory";
+		}else if (keyPress.equals("N") || keyPress.equals("n")){
+
+		}else if (keyPress.equals("V") || keyPress.equals("v")){
+
+		}else if (keyPress.equals("L") || keyPress.equals("l")){
+
+		}else if (keyPress.equals("U") || keyPress.equals("u")){
+			
 		}
 	}
 

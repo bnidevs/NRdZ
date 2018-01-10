@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-//import helper.*;
+import helper.*;
 
 public class DataStorage {
     
@@ -42,7 +42,7 @@ public class DataStorage {
     public String gamblerList(){
 	return toString(_gamblers); 
     }
-    /**
+    
     public void expand(String[][] s) {
 	String[][] temp = new String[s.length + 1] [4];
 	for ( int row = 0; row < s.length ; row ++) {
@@ -68,7 +68,7 @@ public class DataStorage {
         String[] lastrow = {g.name(), g.level() + "", g.upgrade(), 0 + ""} ;
         _gamblers.add(lastrow);
     }
-    **/
+
     public String sortList(ArrayList<String[]> helper, int col) {
 	String[][] names = new String[helper.size()][2];
 	for (int x = 0; x < helper.size(); x ++ ) {

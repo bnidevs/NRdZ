@@ -1,28 +1,29 @@
-package datastorage;
+import java.util.ArrayList;
+//import helper.*;
 
 public class DataStorage {
-
+    
     // 2-D array with a list of helpers of that type, detailing their names, levels, upgrades, and upgrade type
 
-    private String[][] _miners;
-    private String[][] _engineers;
-    private String[][] _gamblers;
+    private ArrayList<String[]>  _miners;
+    private ArrayList<String[]>  _engineers;
+    private ArrayList<String[]>  _gamblers;
 
-    
+  
     public DataStorage(){
-	_miners = new String[1][4];
-	_engineers = new String[1][4];
-	_gamblers = new String[1][4];
+	_miners  = new ArrayList<String[]>(1 );
+	_engineers = new ArrayList<String[]>(1);
+	_gamblers = new ArrayList<String[]>(1);
     }
     
     // METHODS =============================================
 
-    public String toString(String[][] s) {
+    public String toString(ArrayList<String[]> s) {
 	String foo = " | Name \t Level \t Upgrade Tier \t Gold |";
-	for (int i = 0; i < s.length; i ++ ) {
+	for (int i = 0; i < s.size(); i ++ ) {
 	    foo += " | ";
-	    for (int j = 0; j < s[i].length; j++ ) {
-		foo += s[i][j] + "\t";
+	    for (int j = 0; j < s.get(i).length; j++ ) {
+		foo += s.get(i)[j] + "\t";
 	    }
 	    foo += "|\n";
 	}
@@ -41,7 +42,7 @@ public class DataStorage {
     public String gamblerList(){
 	return toString(_gamblers); 
     }
-
+    /**
     public void expand(String[][] s) {
 	String[][] temp = new String[s.length + 1] [4];
 	for ( int row = 0; row < s.length ; row ++) {
@@ -50,36 +51,35 @@ public class DataStorage {
 	}
 	s = temp; 
     }
+    
+    
     public void addMiner(Miner m) {
-	expand(_miners);
 	String[] lastrow =  {m.name(), m.level() + "", m.upgrade(), 1 * m.multiGold() + m.additionGold() + ""};
-	_miners[_miners.length - 1] = lastrow;
+	_miners.add(lastrow);
 	
     }
 
     public void addEngineer(Engineer e) {
-	expand(_engineers);
 	String[] lastrow = {e.name(), e.level() + "", e.upgrade(), 1 * e.multiGold() + e.additionGold() + ""};
-	_engineers[_engineers.length - 1] = lastrow;
+	_engineers.add(lastrow);
     }
 
     public void addGambler(Gambler g) {
-	expand(_gamblers);
         String[] lastrow = {g.name(), g.level() + "", g.upgrade(), 0 + ""} ;
-        _gamblers[_gamblers.length - 1] = lastrow;
+        _gamblers.add(lastrow);
     }
-
-    public String sortList(String[][] helper, int col) {
-	String[][] names = new String[helper.length][2];
-	for (int x = 0; x < helper.length; x ++ ) {
+    **/
+    public String sortList(ArrayList<String[]> helper, int col) {
+	String[][] names = new String[helper.size()][2];
+	for (int x = 0; x < helper.size(); x ++ ) {
 	    names[x][0] = x + "";
-	    names[x][1] = helper[x][col];
+	    names[x][1] = helper.get(x)[col];
 	}
 	insertionSortV(names); 
-	String[][]temp = new String[helper.length][helper[0].length];
-	for (int y = 0; y < temp.length; y++) {
+	ArrayList<String[]>temp = new ArrayList<String[]>(helper.size());
+	for (int y = 0; y < temp.size(); y++) {
 	    int spot = Integer.parseInt(names[y][0]);
-	    temp[y] = helper[spot];
+	    temp.set(y,  helper.get(spot));
 	}
 	helper = temp;
 	return toString(helper);
@@ -99,5 +99,12 @@ public class DataStorage {
 		    break;
             }
 	}
-    }//end insertionSortV           
+    }//end insertionSortV
+
+    public static void main(String[] args) {
+	
+
+
+    }
+    
 } //end class DataStorage

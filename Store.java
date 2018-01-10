@@ -6,19 +6,21 @@ public class Store {
  * Note that "bill" is a placeholder
  */
 public void buy(String input, DataStorage data){
-        Helper bill;
         //For purchasing Miners
         if ( input.equals("1") ) {
+                Miner bill;
                 bill = new Miner("bill");
                 data.addMiner(bill);
         }
         //For purchasing Engineers
         else if( input.equals("2") ) {
+                Engineer bill;
                 bill = new Engineer("bill");
                 data.addEngineer(bill);
         }
         //For purchasing Gamblers
         else{
+                Gambler bill;
                 bill = new Gambler("bill");
                 data.addGambler(bill);
         }

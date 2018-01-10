@@ -1,5 +1,5 @@
 // Helper that produces gold per second
-public class Miner extends Helper {
+public class Miner extends Worker {
 
 private int _additionGoldPS;   //addition bonus received from upgrades
 private double _multiGoldPS;   //multiplier bonus received from upgrades
@@ -11,8 +11,7 @@ public Miner(){
 }
 
 public Miner(String name){ //overloaded consturctor that gives naming functionality
-        this();
-        _name = name;
+        super(name);
 }
 
 public int additionGold(){ //accessor the addition variable
@@ -31,4 +30,11 @@ public void multiMutate( int multi){ //modifies the multi variable
         _multiGoldPS += multi;
 }
 
+public static void main(String[] args) {
+        /* test code ---------------------------
+         * Miner maggie = new Miner("maggie");
+         * System.out.println( maggie.level() );
+         */
+
+}
 }//end class Miner

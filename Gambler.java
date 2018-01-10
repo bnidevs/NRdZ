@@ -10,8 +10,9 @@ public Gambler(){
 }
 
 public Gambler(String name){ //overloaded consturctor that gives naming functionality
-        this();
-        _name = name;
+        super(name);
+        _luck = 0;
+        _glevel = _level;
 }
 
 public int level(){ //overwritten accessor for level

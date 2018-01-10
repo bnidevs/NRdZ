@@ -1,5 +1,5 @@
 //A Helper that porduces gold upon key press
-public class Engineer extends Helper {
+public class Engineer extends Worker {
 
 private int _additionGoldPKP;   //addition bonus received from upgrades
 private double _multiGoldPKP;   //multiplier bonus received from upgrades
@@ -11,8 +11,7 @@ public Engineer(){   //set level to 1 and upgrade to 0
 }
 
 public Engineer(String name){ //overloaded consturctor that gives naming functionality
-        this();
-        _name = name;
+        super(name);
 }
 
 public int additionGold(){ //accessor the addition variable

@@ -9,6 +9,11 @@ public Helper(){ //initialize everything
         _upgrade = "0";
 }
 
+public Helper(String name){
+        this();
+        _name = name;
+}
+
 public String name(){ //accessor for name
         return _name;
 }

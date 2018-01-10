@@ -21,8 +21,12 @@ public class Woo {
 	public static String gameScreen;
 	public static boolean status = true;
 
+	public static long prevTime;
+	public static long currTime;
+
 	public static void main(String[] args) {
 		UserInterface.introUI();
+		prevTime = System.currentTimeMillis();
 		tapMech();
 
 		UserInterface.firstGold();
@@ -50,9 +54,12 @@ public class Woo {
 
 	public static void tapMech(){
 		_totalGoldPKP = (int)((_baseGoldPKP + _additiveGoldPKP) * _multiGoldPKP);
+		_totalGoldPS = (int)(_additiveGoldPS * _multiGoldPS);
 		keyPress = Keyboard.readString();
 		if (keyPress.equals(" ")){
-			_gold += _totalGoldPKP;
+			currTime = System.currentTimeMillis();
+			_gold += _totalGoldPKP + (int)((currTime - prevTime) / 1000) * _totalGoldPS;
+			prevTime = currTime;
 		}else if (keyPress.equals("Q") || keyPress.equals("q")){
 			status = false;
 			System.exit(0);

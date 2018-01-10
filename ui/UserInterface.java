@@ -84,4 +84,8 @@ public class UserInterface {
 		System.out.println("[R]eturn\n\nMiners produce gold based on time.\n\nEngineers give your SPACE + ENTERs more gold.\n\nGamblers increase your chance of winning the lottery.\nYou have a 1/2000 base chance of winning the lottery every second.\n\nEarthquakes, thunderstorms and bankruptcies are also random events.\nEach has a 1/1000 chance per second of occuring.\n\nEarthquakes kill 1/4 of your miners at random.\nThunderstorms kill 1/4 of your engineers at random.\nBankruptcies kill 1/4 of your gamblers at random.\n\nA robbery has a 1/10000 chance of occuring per second.\nA robbery empties the bank of all your gold.\n\n\n\n\n");
 	}
 
+	public static void storeUI(){
+		System.out.println("[R]eturn\n\n[1] Buy a miner : " + "\n\n[2] Buy an engineer : " + "\n\n[3] Buy a gambler : " + "\n\n[4] Dynamite (doubles miner production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[5] Power Surge (doubles engineer production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[6] Extra Chips (doubles gambler odds)  : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[7] QAFee (doubles everything) : 2500 gold\n\t30 sec duration : 5 min cooldown");
+	}
+
 }//end class UserInterface

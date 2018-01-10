@@ -50,20 +50,20 @@ public class DataStorage {
     }
     public void addMiner(Miner m) {
 	expand(_miners);
-	String[] lastrow =  {m._name, m._level + "", m._upgrade, 1 * m.multiGold() + m.additionGold() + ""};
+	String[] lastrow =  {m.name(), m.level() + "", m.upgrade(), 1 * m.multiGold() + m.additionGold() + ""};
 	_miners[_miners.length - 1] = lastrow;
 	
     }
 
     public void addEngineer(Engineer e) {
 	expand(_engineers);
-	String[] lastrow = {e._name, e._level + "", e._upgrade, 1 * e.multiGold() + e.additionGold() + ""};
+	String[] lastrow = {e.name(), e.level() + "", e.upgrade(), 1 * e.multiGold() + e.additionGold() + ""};
 	_engineers[_engineers.length - 1] = lastrow;
     }
 
     public void addGambler(Gambler g) {
 	expand(_gamblers);
-        String[] lastrow = {g._name, g._level + "", g._upgrade, 0 + ""} ;
+        String[] lastrow = {g.name(), g.level() + "", g.upgrade(), 0 + ""} ;
         _gamblers[_gamblers.length - 1] = lastrow;
     }
 

@@ -20,6 +20,7 @@ public class Woo {
 
 	public static String gameScreen;
 	public static boolean status = true;
+	public static boolean tutorialCompleted = false;
 
 	public static long prevTime;
 	public static long currTime;
@@ -35,8 +36,9 @@ public class Woo {
 
 		while(status){
 			if(gameScreen.equals("main")){
-				if(_gold == 30){
+				if(_gold == 30 && tutorialCompleted == false){
 					UserInterface.tutorial();
+					tutorialCompleted = true;
 					tapMech();
 				}else if(_gold < 30){
 					UserInterface.mainUIpreTut(_gold);
@@ -47,6 +49,9 @@ public class Woo {
 				}
 			}else if(gameScreen.equals("help")){
 				UserInterface.helpUI();
+				tapMech();
+			}else if(gameScreen.equals("store")){
+				UserInterface.storeUI();
 				tapMech();
 			}
 		}

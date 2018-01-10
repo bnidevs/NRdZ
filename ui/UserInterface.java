@@ -85,7 +85,7 @@ public class UserInterface {
 	}
 
 	public static void storeUI(){
-		System.out.println("[R]eturn\n\n[1] Buy a miner : " + "\n\n[2] Buy an engineer : " + "\n\n[3] Buy a gambler : " + "\n\n[4] Dynamite (doubles miner production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[5] Power Surge (doubles engineer production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[6] Extra Chips (doubles gambler odds)  : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[7] QAFee (doubles everything) : 2500 gold\n\t30 sec duration : 5 min cooldown");
+		System.out.println("[R]eturn\n\n[1] Buy a miner : " + "\n\n[2] Buy an engineer : " + "\n\n[3] Buy a gambler : " + "\n\n[4] Dynamite (doubles miner production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[5] Power Surge (doubles engineer production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[6] Extra Chips (doubles gambler odds)  : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[7] QAFee (doubles everything) : 2500 gold\n\t30 sec duration : 5 min cooldown\n\n\n\n");
 	}
 
 }//end class UserInterface

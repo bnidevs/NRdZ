@@ -71,6 +71,12 @@ public class Woo {
 
 		}else if (keyPress.equals("U") || keyPress.equals("u")){
 			
+		}else if (keyPress.equals("E") || keyPress.equals("e")){
+
+		}else if (keyPress.equals("M") || keyPress.equals("m")){
+
+		}else if (keyPress.equals("G") || keyPress.equals("g")){
+			
 		}
 	}
 

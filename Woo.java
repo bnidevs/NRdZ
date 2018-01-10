@@ -26,6 +26,7 @@ public class Woo {
 
 	public static void main(String[] args) {
 		UserInterface.introUI();
+		prevTime = System.currentTimeMillis();
 		tapMech();
 
 		UserInterface.firstGold();

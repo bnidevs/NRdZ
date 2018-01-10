@@ -25,4 +25,8 @@ public void changeLuck( double amt ){ //modify the luck
         _luck += amt;
 }
 
+public double luck(){ //accessor for luck
+        return _luck;
+}
+
 }//end class Gambler

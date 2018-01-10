@@ -2,7 +2,7 @@ package helper;
 
 public class Gambler extends Helper {
 
-private int _luck;   //the amount of luck the lottery is increased by
+private double _luck;   //the amount of luck the lottery is increased by
 private final int _glevel;
 
 public Gambler(){
@@ -19,6 +19,10 @@ public Gambler(String name){ //overloaded consturctor that gives naming function
 
 public int level(){ //overwritten accessor for level
         return _glevel;
+}
+
+public void changeLuck( double amt ){ //modify the luck
+        _luck += amt;
 }
 
 }//end class Gambler

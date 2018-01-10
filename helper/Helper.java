@@ -28,11 +28,6 @@ public String upgrade(){ //accessor for upgrade tier
         return _upgrade;
 }
 
-//Note: Individual gold increases will be handled in the subclasses
-public void levelUp(){ //level up
-        _level++;
-}
-
 public void upgradeUp(){ //level up for upgrade tiers
         if ( upgrade().equals("0") ) { //if there are no upgrades, add one I
                 _upgrade = "I";

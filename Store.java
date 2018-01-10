@@ -24,24 +24,18 @@ public void buy(String input, DataStorage data){
                 bill = new Gambler("bill");
                 data.addGambler(bill);
         }
-
 }
 
-/***
-   public void buyMiner(DataStorage d){ //creates new Miner object and appends it to the Datastorage Array
-        Miner bill = new Miner("bill");
-        d.addMiner("bill");
-   }
+public void levelMiner( Miner m ){
+        m.levelUp(); //indicates the Miner has leveled
+        m.addMutate(5); //increases the rate
+}
 
-   public void buyEngineer(DataStorage d){ //creates a new Engineer object and appends to Datastorage array
-        Engineer bill = new Engineer("bill");
-        d.addEngineer("bill");
-   }
+public void levelEngineer( Engineer e ){
+        e.levelUp(); //indicates the Engineer has leveled
+        e.addMutate(5); //increases the rate
+}
 
-   public void buyGambler(){
-
-   }
- ***/
 
 public static void main(String[] args) {
 

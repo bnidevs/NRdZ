@@ -1,3 +1,5 @@
+package helper;
+
 public abstract class Helper {
 
 protected String _name;

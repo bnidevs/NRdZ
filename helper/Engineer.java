@@ -1,3 +1,5 @@
+package helper;
+
 //A Helper that porduces gold upon key press
 public class Engineer extends Worker {
 

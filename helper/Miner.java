@@ -1,3 +1,5 @@
+package helper;
+
 // Helper that produces gold per second
 public class Miner extends Worker {
 

@@ -79,6 +79,7 @@ public class DataStorage {
 	    int spot = Integer.parseInt(names[y][0]);
 	    temp[y] = helper[spot];
 	}
+	helper = temp;
 	return toString(helper);
     }
 

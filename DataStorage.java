@@ -40,6 +40,19 @@ public class DataStorage {
 	this.addEngineer(ts);
 
 	_gamblers = new ArrayList<String[]>();
+
+	Gambler m = new Gambler("Mr. Monopoly", 30);
+	Gambler a = new Gambler("Alan Garner", 75)
+	Gambler j = new Gambler("James Bond", 150);
+	Gambler da = new Gambler("Danny Ocean", 300);
+	Gambler li = new Gambler("Libratus", 750);
+
+	this.addGambler(m);
+	this.addGambler(a);
+	this.addGambler(j);
+	this.addGambler(da);
+	this.addGambler(li);
+
     }
     
     // METHODS =============================================

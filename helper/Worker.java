@@ -1,6 +1,9 @@
 package helper;
 
 public abstract class Worker extends Helper {
+
+protected String upgradeType;
+
 public Worker(){
         super();
 }
@@ -21,4 +24,8 @@ public abstract double multiGold(); //accessor for the multiplier variable
 public abstract void addMutate( int addend ); //modifies the addition variable
 
 public abstract void multiMutate( int multi); //modifies the multi variable
+
+//details the actual upgrade for the class
+public void upgradeEffect(){
+}
 }

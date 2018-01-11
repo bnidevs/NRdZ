@@ -28,8 +28,6 @@ public class Woo {
 	public static DataStorage data = new DataStorage();
 
 	public static void main(String[] args) {
-
-
 		UserInterface.introUI();
 		prevTime = System.currentTimeMillis();
 		tapMech();

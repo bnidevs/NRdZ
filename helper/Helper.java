@@ -6,6 +6,7 @@ protected String _name;
 protected int _level;
 protected String _upgrade; //upgrades cap at tier III
 protected int _cost;
+protected boolean bought = false;
 
 public Helper(){ //initialize everything
         _level = 1;

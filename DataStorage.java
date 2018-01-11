@@ -12,7 +12,33 @@ public class DataStorage {
   
     public DataStorage(){
 	_miners  = new ArrayList<String[]>();
+
+	Miner s = new Miner("Steve", 30);
+	Miner y = new Miner("Yosemite Sam", 75);
+	Miner i = new Miner("Indiana Jones", 150);
+	Miner w = new Miner("Waluigi", 300);
+	Miner t = new Miner("Thorin Oakenshield", 750);
+
+	this.addMiner(s);
+	this.addMiner(y);
+	this.addMiner(i);
+	this.addMiner(w);
+	this.addMiner(t);
+
 	_engineers = new ArrayList<String[]>();
+
+	Engineer b = new Engineer("Bob the Builder", 30);
+	Engineer to = new Engineer("Torbjorn", 75);
+	Engineer d = new Engineer("Dell Conagher", 150);
+	Engineer l = new Engineer("Lucius Fox", 300);
+	Engineer ts = new Engineer("Tony Stark", 750);
+
+	this.addEngineer(b);
+	this.addEngineer(to);
+	this.addEngineer(d);
+	this.addEngineer(l);
+	this.addEngineer(ts);
+
 	_gamblers = new ArrayList<String[]>();
     }
     

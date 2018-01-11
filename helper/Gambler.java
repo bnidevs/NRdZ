@@ -11,8 +11,8 @@ public Gambler(){
         _glevel = _level;
 }
 
-public Gambler(String name){ //overloaded consturctor that gives naming functionality
-        super(name);
+public Gambler(String name, int cost){ //overloaded consturctor that gives naming functionality
+        super(name, cost);
         _luck = 0;
         _glevel = _level;
 }

@@ -12,8 +12,8 @@ public Miner(){
         _multiGoldPS = 1;
 }
 
-public Miner(String name){ //overloaded consturctor that gives naming functionality
-        super(name);
+public Miner(String name, int cost){ //overloaded consturctor that gives naming functionality
+        super(name, cost);
 }
 
 public int additionGold(){ //accessor the addition variable

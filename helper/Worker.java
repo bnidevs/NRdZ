@@ -5,8 +5,8 @@ public Worker(){
         super();
 }
 
-public Worker(String name){ //calls the overloaded constructor of Helper
-        super(name);
+public Worker(String name, int cost){ //calls the overloaded constructor of Helper
+        super(name, cost);
 }
 
 //Note: Individual gold increases will be handled in the subclasses

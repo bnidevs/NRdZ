@@ -42,7 +42,7 @@ public class DataStorage {
 	_gamblers = new ArrayList<String[]>();
 
 	Gambler m = new Gambler("Mr. Monopoly", 30);
-	Gambler a = new Gambler("Alan Garner", 75)
+	Gambler a = new Gambler("Alan Garner", 75);
 	Gambler j = new Gambler("James Bond", 150);
 	Gambler da = new Gambler("Danny Ocean", 300);
 	Gambler li = new Gambler("Libratus", 750);

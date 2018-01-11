@@ -12,8 +12,8 @@ public Engineer(){   //set level to 1 and upgrade to 0
         _multiGoldPKP = 1;
 }
 
-public Engineer(String name){ //overloaded consturctor that gives naming functionality
-        super(name);
+public Engineer(String name, int cost){ //overloaded consturctor that gives naming functionality
+        super(name, cost);
 }
 
 public int additionGold(){ //accessor the addition variable

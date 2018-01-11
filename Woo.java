@@ -90,7 +90,19 @@ public class Woo {
 
 		}else if (keyPress.equals("G") || keyPress.equals("g")){
 
-		}
+		}else if (keyPress.equals("1")){
+
+		}else if (keyPress.equals("2")){
+
+		}else if (keyPress.equals("3")){
+
+		}else if (keyPress.equals("4")){
+			
+		}else if (keyPress.equals("5")){
+
+		}else if (keyPress.equals("6")){
+
+		}else if (keyPress.equals("7")){
 	}
 
 }

@@ -5,15 +5,17 @@ public abstract class Helper {
 protected String _name;
 protected int _level;
 protected String _upgrade; //upgrades cap at tier III
+protected int _cost;
 
 public Helper(){ //initialize everything
         _level = 1;
         _upgrade = "0";
 }
 
-public Helper(String name){
+public Helper(String name, int cost){
         this();
         _name = name;
+        _cost = cost;
 }
 
 public String name(){ //accessor for name
@@ -26,6 +28,10 @@ public int level(){ //accessor for level
 
 public String upgrade(){ //accessor for upgrade tier
         return _upgrade;
+}
+
+public int cost(){
+        return _cost;
 }
 
 public void upgradeUp(){ //level up for upgrade tiers

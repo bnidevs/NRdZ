@@ -25,7 +25,11 @@ public class Woo {
 	public static long prevTime;
 	public static long currTime;
 
+	public static DataStorage data = new DataStorage();
+
 	public static void main(String[] args) {
+
+
 		UserInterface.introUI();
 		prevTime = System.currentTimeMillis();
 		tapMech();
@@ -104,5 +108,6 @@ public class Woo {
 
 		}else if (keyPress.equals("7")){
 	}
+}
 
 }

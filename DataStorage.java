@@ -11,9 +11,9 @@ public class DataStorage {
 
   
     public DataStorage(){
-	_miners  = new ArrayList<String[]>(1 );
-	_engineers = new ArrayList<String[]>(1);
-	_gamblers = new ArrayList<String[]>(1);
+	_miners  = new ArrayList<String[]>();
+	_engineers = new ArrayList<String[]>();
+	_gamblers = new ArrayList<String[]>();
     }
     
     // METHODS =============================================
@@ -119,19 +119,6 @@ public class DataStorage {
 	}
     }//end insertionSortV
 
-    public static void main(String[] args) {
-	ArrayList<String[]> _miners = new ArrayList<String[]>();
-	_miners.add(new String[]{"Robert" , "1", "3", "6"});
-	_miners.add(new String[]{"Joseph", "34", "22", "35"});
-	_miners.add(new String[]{"Broseph", "12", "34", "88"});
-	_miners.add(new String[]{"Cindy", "2", "5", "6"});
-	
-	System.out.println(toString(_miners));
-	System.out.println(sortList(_miners, 0));
-	System.out.println(sortList(_miners, 1));
-	System.out.println(sortList(_miners, 2));
-	System.out.println(sortList(_miners, 3));
-
-    }
+    public static void main(String[] args) {}
     
 } //end class DataStorage

@@ -4,9 +4,10 @@ public class Gambler extends Helper {
 
 private final double _luck = 0.0005;
 
+public static void main(String[] args){};
+
 public Gambler(){
         super();
-        _luck = 0;
 }
 
 public Gambler(String name, int cost){ //overloaded consturctor that gives naming functionality

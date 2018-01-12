@@ -9,7 +9,6 @@ protected int _cost;
 protected boolean bought = false;
 
 public Helper(){ //initialize everything
-        _level = 1;
         _upgrade = "0";
 }
 
@@ -53,12 +52,6 @@ public String[] stats(){ //returns the stats of a Helper in a 1-D array
         return stats;
 }
 
-public static void main(String[] args) {
-        //testing code
-        //Helper max = new Helper();
-        //max.upgradeUp();
-        //max.upgradeUp();
-        //max.stats(); //for checking to see if the stats actually works
-}
+public static void main(String[] args) {}
 
 }//end class Helper

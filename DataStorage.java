@@ -28,7 +28,7 @@ public class DataStorage {
 	_engineers = new ArrayList<String[]>();
 
 	Engineer b = new Engineer("Bob the Builder", 30);
-	Engineer to = new Engineer("Torbjorn", 75);
+	Engineer to = new Engineer("Torbjörn", 75);
 	Engineer d = new Engineer("Dell Conagher", 150);
 	Engineer l = new Engineer("Lucius Fox", 300);
 	Engineer ts = new Engineer("Tony Stark", 750);

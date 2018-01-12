@@ -39,6 +39,10 @@ public void buy(){
         bought = true;
 }
 
+public boolean bought(){
+        return bought;
+}
+
 public void upgradeUp(){ //level up for upgrade tiers
         if ( upgrade().equals("0") ) { //if there are no upgrades, add one I
                 _upgrade = "I";

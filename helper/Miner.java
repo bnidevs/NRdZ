@@ -14,6 +14,8 @@ public Miner(){
 
 public Miner(String name, int cost, int level){ //overloaded consturctor that gives naming functionality
         super(name, cost, level);
+        _additionGoldPS = level * base;
+        _multiGoldPS = 0;
 }
 
 public int additionGold(){ //accessor the addition variable

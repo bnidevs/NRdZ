@@ -2,14 +2,16 @@ package helper;
 
 public abstract class Worker extends Helper {
 
+protected final int base = 3;
+
 protected String upgradeType;
 
 public Worker(){
         super();
 }
 
-public Worker(String name, int cost){ //calls the overloaded constructor of Helper
-        super(name, cost);
+public Worker(String name, int cost, int level){ //calls the overloaded constructor of Helper
+        super(name, cost, level);
 }
 
 //Note: Individual gold increases will be handled in the subclasses

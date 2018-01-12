@@ -8,12 +8,12 @@ private double _multiGoldPS;   //multiplier bonus received from upgrades
 
 public Miner(){
         super();
-        _additionGoldPS = 0;
-        _multiGoldPS = 1;
+        _additionGoldPS = _level * base;
+        _multiGoldPS = 0;
 }
 
-public Miner(String name, int cost){ //overloaded consturctor that gives naming functionality
-        super(name, cost);
+public Miner(String name, int cost, int level){ //overloaded consturctor that gives naming functionality
+        super(name, cost, level);
 }
 
 public int additionGold(){ //accessor the addition variable

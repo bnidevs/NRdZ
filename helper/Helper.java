@@ -13,10 +13,11 @@ public Helper(){ //initialize everything
         _upgrade = "0";
 }
 
-public Helper(String name, int cost){
+public Helper(String name, int cost, int level){
         this();
         _name = name;
         _cost = cost;
+        _level = level;
 }
 
 public String name(){ //accessor for name
@@ -33,6 +34,10 @@ public String upgrade(){ //accessor for upgrade tier
 
 public int cost(){
         return _cost;
+}
+
+public void buy(){
+        bought = true;
 }
 
 public void upgradeUp(){ //level up for upgrade tiers

@@ -1,4 +1,5 @@
 NRdZ- Maggie Zhao, Bill Ni, Raunak Chowdhury
+APCS1 pd 2
 
 1. C) 2
 n = 2013
@@ -53,4 +54,94 @@ Interface B has void methodB(); and Interface A has void methodB();
 8. A) I only
       the method is abstract and has to has the same signature
 
-9. 
+9. C) It is the number of occurences of the value target in nums.
+Sample run:
+target = 10
+        [7,10,10,15,15,15,15,10,10,10,15,10,10]
+lenC= 0 |-, 1, 2, -, -, -, -, 3, 4, 5, -, 6, 7|
+maxL= 0 |-, -, -, 2,x2,x2,x2,x2,x2,x2, 5,x5,x5|
+** x# means the maxLength stayed the same
+if (lenCount > maxLen)
+   maxLen = lenCount = 7
+maxLen = 7
+7 != 3
+
+10. D) Insert the statement lenCount = 0; between lines 11 and 12.
+Sample run: 
+target = 10
+        [7,10,10,15,15,15,15,10,10,10,15,10,10]
+lenC= 0 |-, 1, 2, 0, -, -, -, 1, 2, 3, 0, 1, 2]
+maxL= 0 |-, -, -, 2,x2,x2,x2,x2,x2,x2, 3,x3,x3]
+** x# means the maxLength stayed the same
+if (lenCount > maxLen)
+   maxLen = lenCount = 3
+maxLen = 3
+3 == 3
+
+11a.
+public int nextTankToFill(int threshold) {
+       int min = tanks.get(0).getFuelLevel();
+       int index = 0;
+       for (i = 1; i < tanks.length(); i++ ) {
+       	   if (tanks.get(i).getFulLevel() < min) {
+	      min = tanks.get(i);
+	      index = i;
+	    }
+	}
+	if (min <= threshold) {
+	   return index;
+	}
+	else {
+	     return getCurrentIndex();
+	}
+}
+
+11b.
+public void moveToLocation(int locIndex) {
+       int loc = getCurrentIndex();
+       if (locIndex > loc) {
+       	  if ( ! isFacingRight())
+	     changeDirection();
+	}
+	else {
+	     if (isFacingRight())
+	     	changeDirection();
+	}
+	moveFoward(Math.abs(locIndex-loc));
+}
+
+12a.
+private void fillBlock(String str) {
+	if (str.length() < (numRows * numCols) {
+	   int loop = numRows*numCols - str.length();
+	   for (i = 0; i < loop; i ++) {
+	       str += "A";
+	   }
+	}
+
+	for (int row = 0, row < numRows; row ++ ) {
+	    for (int col = 0; col < numCols; col ++){
+	    	str[row][col] = str.substring(0,1);
+	    	str = str.substring(1, str.length());
+	    }
+	}
+}
+
+12b.
+public String encryptMessage(String message) {
+       int size = numRows * numCols; 
+       int substr = Math.ceil(message.length() * 1.0 /  size );
+       String ret = "";
+       if (substr > 1) {
+              for (i = 0; i < substr - 1; i++ ) {
+       	      	   int start = i * size;	   
+       	   	   fillBlock(message.substring( start, start + size));
+	   	   ret += encryptBlock(); 
+		}
+       }
+
+       fillBlock(message.substring( (substr - 1) * size() ) );
+       ret += encryptBlock();
+       return ret;
+}
+	     

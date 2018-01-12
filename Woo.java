@@ -7,14 +7,15 @@ import helper.*;
 public class Woo {
 	public static int _gold = 0;
 
-	public static final int _baseGoldPKP = 1;
-	public static int _additiveGoldPKP = 0;
+	public static int _additiveGoldPKP = 1;
 	public static double _multiGoldPKP = 1.0;
-	public static int _totalGoldPKP = (int)((_baseGoldPKP + _additiveGoldPKP) * _multiGoldPKP);
+	public static int _totalGoldPKP = (int)(_additiveGoldPKP * _multiGoldPKP);
 
 	public static int _additiveGoldPS = 0;
 	public static double _multiGoldPS = 1.0;
 	public static int _totalGoldPS = (int)(_additiveGoldPS * _multiGoldPS);
+
+	public static double _luck = 0.0005;
 
 	public static String keyPress;
 
@@ -53,14 +54,22 @@ public class Woo {
 				UserInterface.helpUI();
 				tapMech();
 			}else if(gameScreen.equals("store")){
-				UserInterface.storeUI();
+				UserInterface.storeUI(DataStorage.strCreate(data.firstUnbought(1)), DataStorage.strCreate(data.firstUnbought(2)), DataStorage.strCreate(data.firstUnbought(3)));
 				tapMech();
 			}
 		}
 	}
 
 	public static void tapMech(){
-		_totalGoldPKP = (int)((_baseGoldPKP + _additiveGoldPKP) * _multiGoldPKP);
+		_additiveGoldPKP += data.goldProductionUpdate().get(2);
+		_multiGoldPKP += data.goldProductionUpdate().get(3);
+
+		_additiveGoldPS += data.goldProductionUpdate().get(0);
+		_multiGoldPS += data.goldProductionUpdate().get(1);
+
+		_luck += data.goldProductionUpdate().get(4);
+
+		_totalGoldPKP = (int)(_additiveGoldPKP * _multiGoldPKP);
 		_totalGoldPS = (int)(_additiveGoldPS * _multiGoldPS);
 		keyPress = Keyboard.readString();
 		if (keyPress.equals(" ")){
@@ -78,26 +87,47 @@ public class Woo {
 			gameScreen = "store";
 		}else if (keyPress.equals("I") || keyPress.equals("i")){
 			gameScreen = "inventory";
-		}else if (keyPress.equals("N") || keyPress.equals("n")){
+		}else if (keyPress.equals("N") || keyPress.equals("n")){ //name
 
-		}else if (keyPress.equals("V") || keyPress.equals("v")){
+		}else if (keyPress.equals("V") || keyPress.equals("v")){ //value
 
-		}else if (keyPress.equals("L") || keyPress.equals("l")){
+		}else if (keyPress.equals("L") || keyPress.equals("l")){ //level
 
-		}else if (keyPress.equals("U") || keyPress.equals("u")){
+		}else if (keyPress.equals("U") || keyPress.equals("u")){ //upgrade tier
 			
-		}else if (keyPress.equals("E") || keyPress.equals("e")){
+		}else if (keyPress.equals("E") || keyPress.equals("e")){ //display engineers
 
-		}else if (keyPress.equals("M") || keyPress.equals("m")){
+		}else if (keyPress.equals("M") || keyPress.equals("m")){ //display miners
 
-		}else if (keyPress.equals("G") || keyPress.equals("g")){
+		}else if (keyPress.equals("G") || keyPress.equals("g")){ //display gamblers
 
 		}else if (keyPress.equals("1")){
-
+			if(data.firstUnboughtCost(1) > _gold){
+				UserInterface.noGold(DataStorage.strCreate(data.firstUnbought(1)), DataStorage.strCreate(data.firstUnbought(2)), DataStorage.strCreate(data.firstUnbought(3)));
+				tapMech();
+			}else if(data.firstUnboughtCost(1) < 0){
+				UserInterface.storeUIMsg("All miners have been bought", DataStorage.strCreate(data.firstUnbought(2)), DataStorage.strCreate(data.firstUnbought(3)), "You have bought all the Miners");
+			}else{
+				_gold = _gold - data.buy(1);
+			}
 		}else if (keyPress.equals("2")){
-
+			if(data.firstUnboughtCost(2) > _gold){
+				UserInterface.noGold(DataStorage.strCreate(data.firstUnbought(1)), DataStorage.strCreate(data.firstUnbought(2)), DataStorage.strCreate(data.firstUnbought(3)));
+				tapMech();
+			}else if(data.firstUnboughtCost(2) < 0){
+				UserInterface.storeUIMsg(DataStorage.strCreate(data.firstUnbought(1)), "All engineers have been bought", DataStorage.strCreate(data.firstUnbought(3)), "You have bought all the Engineers");
+			}else{
+				_gold = _gold - data.buy(2);
+			}
 		}else if (keyPress.equals("3")){
-
+			if(data.firstUnboughtCost(3) > _gold){
+				UserInterface.noGold(DataStorage.strCreate(data.firstUnbought(1)), DataStorage.strCreate(data.firstUnbought(2)), DataStorage.strCreate(data.firstUnbought(3)));
+				tapMech();
+			}else if(data.firstUnboughtCost(3) < 0){
+				UserInterface.storeUIMsg(DataStorage.strCreate(data.firstUnbought(1)), DataStorage.strCreate(data.firstUnbought(2)), "All gamblers have been bought", "You have bought all the Gamblers");
+			}else{
+				_gold = _gold - data.buy(3);
+			}
 		}else if (keyPress.equals("4")){
 			
 		}else if (keyPress.equals("5")){
@@ -105,7 +135,16 @@ public class Woo {
 		}else if (keyPress.equals("6")){
 
 		}else if (keyPress.equals("7")){
-	}
+
+		}
+
+		_additiveGoldPKP = 1;
+		_multiGoldPKP = 1;
+
+		_additiveGoldPS = 0;
+		_multiGoldPS = 1;
+
+		_luck = 0.0005;
 }
 
 }

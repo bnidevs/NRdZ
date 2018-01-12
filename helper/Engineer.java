@@ -8,12 +8,14 @@ private double _multiGoldPKP;   //multiplier bonus received from upgrades
 
 public Engineer(){   //set level to 1 and upgrade to 0
         super();
-        _additionGoldPKP = 0;
-        _multiGoldPKP = 1;
+        _additionGoldPKP = _level * base;
+        _multiGoldPKP = 0;
 }
 
-public Engineer(String name, int cost){ //overloaded consturctor that gives naming functionality
-        super(name, cost);
+public Engineer(String name, int cost, int level){ //overloaded consturctor that gives naming functionality
+        super(name, cost, level);
+        _additionGoldPKP = level * base;
+        _multiGoldPKP = 0;
 }
 
 public int additionGold(){ //accessor the addition variable

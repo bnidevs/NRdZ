@@ -9,14 +9,14 @@ protected int _cost;
 protected boolean bought = false;
 
 public Helper(){ //initialize everything
-        _level = 1;
         _upgrade = "0";
 }
 
-public Helper(String name, int cost){
+public Helper(String name, int cost, int level){
         this();
         _name = name;
         _cost = cost;
+        _level = level;
 }
 
 public String name(){ //accessor for name
@@ -35,6 +35,14 @@ public int cost(){
         return _cost;
 }
 
+public void buy(){
+        bought = true;
+}
+
+public boolean bought(){
+        return bought;
+}
+
 public void upgradeUp(){ //level up for upgrade tiers
         if ( upgrade().equals("0") ) { //if there are no upgrades, add one I
                 _upgrade = "I";
@@ -48,12 +56,6 @@ public String[] stats(){ //returns the stats of a Helper in a 1-D array
         return stats;
 }
 
-public static void main(String[] args) {
-        //testing code
-        //Helper max = new Helper();
-        //max.upgradeUp();
-        //max.upgradeUp();
-        //max.stats(); //for checking to see if the stats actually works
-}
+public static void main(String[] args) {}
 
 }//end class Helper

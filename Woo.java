@@ -54,7 +54,7 @@ public class Woo {
 				UserInterface.helpUI();
 				tapMech();
 			}else if(gameScreen.equals("store")){
-				UserInterface.storeUI(DataStorage.strCreate(data.firstUnbought(1)), DataStorage.strCreate(data.firstUnbought(2)), DataStorage.strCreate(data.firstUnbought(3)));
+				UserInterface.storeUI(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)));
 				tapMech();
 			}
 		}
@@ -103,28 +103,28 @@ public class Woo {
 
 		}else if (keyPress.equals("1")){
 			if(data.firstUnboughtCost(1) > _gold){
-				UserInterface.noGold(DataStorage.strCreate(data.firstUnbought(1)), DataStorage.strCreate(data.firstUnbought(2)), DataStorage.strCreate(data.firstUnbought(3)));
+				UserInterface.noGold(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)));
 				tapMech();
 			}else if(data.firstUnboughtCost(1) < 0){
-				UserInterface.storeUIMsg("All miners have been bought", DataStorage.strCreate(data.firstUnbought(2)), DataStorage.strCreate(data.firstUnbought(3)), "You have bought all the Miners");
+				UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "You have bought all the Miners");
 			}else{
 				_gold = _gold - data.buy(1);
 			}
 		}else if (keyPress.equals("2")){
 			if(data.firstUnboughtCost(2) > _gold){
-				UserInterface.noGold(DataStorage.strCreate(data.firstUnbought(1)), DataStorage.strCreate(data.firstUnbought(2)), DataStorage.strCreate(data.firstUnbought(3)));
+				UserInterface.noGold(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)));
 				tapMech();
 			}else if(data.firstUnboughtCost(2) < 0){
-				UserInterface.storeUIMsg(DataStorage.strCreate(data.firstUnbought(1)), "All engineers have been bought", DataStorage.strCreate(data.firstUnbought(3)), "You have bought all the Engineers");
+				UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "You have bought all the Engineers");
 			}else{
 				_gold = _gold - data.buy(2);
 			}
 		}else if (keyPress.equals("3")){
 			if(data.firstUnboughtCost(3) > _gold){
-				UserInterface.noGold(DataStorage.strCreate(data.firstUnbought(1)), DataStorage.strCreate(data.firstUnbought(2)), DataStorage.strCreate(data.firstUnbought(3)));
+				UserInterface.noGold(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)));
 				tapMech();
 			}else if(data.firstUnboughtCost(3) < 0){
-				UserInterface.storeUIMsg(DataStorage.strCreate(data.firstUnbought(1)), DataStorage.strCreate(data.firstUnbought(2)), "All gamblers have been bought", "You have bought all the Gamblers");
+				UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "You have bought all the Gamblers");
 			}else{
 				_gold = _gold - data.buy(3);
 			}

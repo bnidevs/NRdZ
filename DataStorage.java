@@ -109,12 +109,20 @@ public class DataStorage {
     	return null;
     }
 
-    public static String strCreate(Helper x){
+    public static String strCreate(int type, Helper x){
     	if(x instanceof Miner || x instanceof Engineer){
     		return (x.name() + " ; Cost: " + x.cost() + " ; Level: " + x.level());
-    	}else{
+    	}else if(x instanceof Gambler){
     		return (x.name() + " ; Cost: " + x.cost() + " ; Level: " + (x.level() + 1));
-    	}
+    	}else{
+            if (type == 1){
+                return "All miners have been bought";
+            }else if (type == 2){
+                return "All engineers have been bought";
+            }else{
+                return "All gamblers have been bought";
+            }
+        }
     }
 
     public int firstUnboughtCost(int helperType){

@@ -38,6 +38,10 @@ public int cost(){
 public void buy(){
         bought = true;
 }
+    
+    public void kill(){
+	bought = false;
+    }
 
 public boolean bought(){
         return bought;

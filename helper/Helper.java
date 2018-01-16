@@ -35,7 +35,7 @@ public int cost(){
         return _cost;
 }
 
-public void buy(){
+public void buy(){ //for purchasing Helpers
         bought = true;
 }
     
@@ -43,7 +43,11 @@ public void buy(){
 	bought = false;
     }
 
-public boolean bought(){
+public void die(){ //for killing off Helpers due to RNG events
+        bought = false;
+}
+
+public boolean bought(){ //accessor for bought
         return bought;
 }
 
@@ -60,6 +64,9 @@ public String[] stats(){ //returns the stats of a Helper in a 1-D array
         return stats;
 }
 
-public static void main(String[] args) {}
+public abstract void upgradeEffect(); //details the actual upgrade for the class
+
+public static void main(String[] args) {
+}
 
 }//end class Helper

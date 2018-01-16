@@ -1,4 +1,7 @@
-import helper.*;
+import helper.Miner;
+import helper.Engineer;
+import helper.Gambler;
+import cs1.Keyboard;
 
 public class Store {
 
@@ -18,25 +21,40 @@ public void levelEngineer( Engineer e ){
         e.addMutate(5); //increases the rate
 }
 
-/*
- *  pre-conditions: - A Keyboard.readString() has been stored in a String var
- *                  - DataStorage has been instantiated
+/*  pre-conditions: - DataStorage has been instantiated
+ *                  - The user knows what Upgrades are
  *
+ *  post-conditions: - The Helper entered now has an Upgrade
  */
-public void upgradeMiner( String input, Miner m ){ //one of two paths: multi or add
-        //addition path
-        if ( input.equals("add") ) {
-
+public void upgradeMiner( Miner m ){
+        if ( m.upgrade().equals("0") ) {
+                System.out.print("Choose what upgrade path ");
+                System.out.print( m.name() );
+                System.out.println("will take!");
+                System.out.println( "To select one, type either \"add\" or \"multi\"!");
+                String input = Keyboard.readString();
+                m.initialUpgrade(input);
+                return;
         }
-        //multi path
+        m.upgradeEffect();
 }
 
-public void upgradeEngineer( String input, Engineer e ){
-
+public void upgradeEngineer( Engineer e ){
+        if ( e.upgrade().equals("0") ) {
+                System.out.print("Choose what upgrade path ");
+                System.out.print( e.name() );
+                System.out.println("will take!");
+                System.out.println( "To select one, type either \"add\" or \"multi\"!");
+                String input = Keyboard.readString();
+                e.initialUpgrade(input);
+                return;
+        }
+        e.upgradeEffect();
 }
 
-public void upgradeGambler( String input, Gambler g ){
-
+//no input is needed, since the Gambler is not producing
+public void upgradeGambler( Gambler g ){
+        g.upgradeEffect();
 }
 
 public static void main(String[] args) {

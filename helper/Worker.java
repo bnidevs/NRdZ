@@ -3,8 +3,7 @@ package helper;
 public abstract class Worker extends Helper {
 
 protected final int base = 3;
-
-protected String upgradeType;
+protected String _upgradeType; //details the type of Upgrade
 
 public Worker(){
         super();
@@ -19,6 +18,10 @@ public void levelUp(){ //level up
         _level++;
 }
 
+public String upgradeType(){ //accessor for the upgradeType
+        return _upgradeType;
+}
+
 public abstract int additionGold(); //accessor for the addition variable
 
 public abstract double multiGold(); //accessor for the multiplier variable
@@ -27,7 +30,6 @@ public abstract void addMutate( int addend ); //modifies the addition variable
 
 public abstract void multiMutate( int multi); //modifies the multi variable
 
-//details the actual upgrade for the class
-public void upgradeEffect(){
-}
+public abstract void initialUpgrade( String str); //initializes the first upgrade
+
 }

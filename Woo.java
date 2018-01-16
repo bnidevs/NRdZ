@@ -47,7 +47,7 @@ public class Woo {
 					UserInterface.mainUIpreTut(_gold);
 					tapMech();
 				}else{
-					UserInterface.mainUIpostTut(_gold);
+					UserInterface.mainUIpostTut(_gold,_totalGoldPKP,_totalGoldPS);
 					tapMech();
 				}
 			}else if(gameScreen.equals("help")){

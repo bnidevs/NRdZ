@@ -64,8 +64,8 @@ public class UserInterface {
 		System.out.println(printGold + " [GOLD]" + TerminalTxtProcessing.textRepeater("\n", 22));
 	}
 
-	public static void mainUIpostTut(int printGold){
-		System.out.println(printGold + " [GOLD]\n\n [S]hop\n\n [H]elp\n\n [I]nventory\n\n [Q]uit" + TerminalTxtProcessing.textRepeater("\n", 14));
+	public static void mainUIpostTut(int printGold, int pkp, int ps){
+		System.out.println(printGold + " [GOLD]  " + pkp + " gold per press  " + ps + " gold per second\n\n [S]hop\n\n [H]elp\n\n [I]nventory\n\n [Q]uit" + TerminalTxtProcessing.textRepeater("\n", 14));
 	}
 
 	public static void tutorial(){

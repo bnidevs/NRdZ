@@ -1,25 +1,25 @@
 NRdZ- Bill Ni, Raunak Chowdhury, Maggie Zhao
 APCS1 pd2
-"Goldfinger" 
+"Goldfinger"
 TO-DO LIST
 [] ** Implement passive gold collecting
 [] ** Link time to gold production (just a prototype, in class Woo)
 [x] ** Write store so that purchases will give the correct bonus.
-[] Helpers?
+[x] Helpers?
 [] Powerups
-[] Store
+[x] Store
 [x] buy Helpers
-[x] level Helpers 
-[] upgrade Helpers
+[x] level Helpers
+[x] upgrade Helpers
 [] buy Powerups
 [] Figure out additive/multiplicative bonuses for helpers.
-[] Link sortList() in DataStorage to Keyboard (so that user can choose how they want to sort the list). 
-	[x] Test DataStorage! 
-	[] Aestheticize the display 
+[] Link sortList() in DataStorage to Keyboard (so that user can choose how they want to sort the list).
+	[x] Test DataStorage!
+	[] Aestheticize the display
 	[] Program the UI
 	[x] introUI
 	[x] mainUI
-		[] Key binds for 
+		[] Key binds for
 			- Store
 			- Help
 			- Inventory
@@ -32,7 +32,7 @@ TO-DO LIST
 	[] + static boolean isThunderstorm()
 	[] + static boolean isBankruptcy()
 	[] + static boolean isRobbery()
-	[] + static boolean jackpot(double luck)  
+	[] + static boolean jackpot(double luck)
 ** do at the very end
 [] Get unwilling testers and find bugs. (Jason Lin)
-[] Add any extras and finish project! 
+[] Add any extras and finish project!

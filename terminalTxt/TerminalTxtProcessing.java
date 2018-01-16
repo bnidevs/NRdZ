@@ -61,4 +61,14 @@ public class TerminalTxtProcessing{
 		}
 		return rtrnArr;
 	}
+
+	public static String lineCenter(int type, String[] inArr){
+		String rtrn = "";
+		if (type == 1){
+			rtrn += inArr[0] + textRepeater(" ", (24 - inArr[0].length())) + inArr[1] + textRepeater(" ", (25 - inArr[1].length())) + inArr[2] + textRepeater(" ", (24 - inArr[2].length())) + inArr[3];
+		}else{
+			rtrn += inArr[0] + textRepeater(" ", (73 - inArr[0].length())) + inArr[1];
+		}
+		return rtrn;
+	}
 }

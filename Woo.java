@@ -22,6 +22,7 @@ public class Woo {
 	public static String gameScreen;
 	public static boolean status = true;
 	public static boolean tutorialCompleted = false;
+	public static int inventoryType = 1;
 
 	public static long prevTime;
 	public static long currTime;
@@ -55,6 +56,15 @@ public class Woo {
 				tapMech();
 			}else if(gameScreen.equals("store")){
 				UserInterface.storeUI(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)));
+				tapMech();
+			}else if(gameScreen.equals("inventory")){
+				if(inventoryType == 1){
+					System.out.println(UserInterface.inventoryUIM(inventoryType, data.minerList()));
+				}else if(inventoryType == 2){
+					System.out.println(UserInterface.inventoryUIE(inventoryType, data.engineerList()));
+				}else{
+					System.out.println(UserInterface.inventoryUIG(inventoryType, data.gamblerList()));
+				}
 				tapMech();
 			}
 		}
@@ -96,11 +106,11 @@ public class Woo {
 		}else if (keyPress.equals("U") || keyPress.equals("u")){ //upgrade tier
 			
 		}else if (keyPress.equals("E") || keyPress.equals("e")){ //display engineers
-
+			inventoryType = 1;
 		}else if (keyPress.equals("M") || keyPress.equals("m")){ //display miners
-
+			inventoryType = 2;
 		}else if (keyPress.equals("G") || keyPress.equals("g")){ //display gamblers
-
+			inventoryType = 3;
 		}else if (keyPress.equals("1")){
 			if(data.firstUnboughtCost(1) > _gold){
 				UserInterface.noGold(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)));

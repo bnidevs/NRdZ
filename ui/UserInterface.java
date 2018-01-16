@@ -2,6 +2,11 @@ package ui;
 
 import java.util.ArrayList;
 import terminalTxt.TerminalTxtProcessing;
+import helper.Helper;
+import helper.Miner;
+import helper.Worker;
+import helper.Engineer;
+import helper.Gambler;
 
 public class UserInterface {
 
@@ -88,8 +93,52 @@ public class UserInterface {
 		System.out.println("[R]eturn\n\n[1] Buy a miner : " + minerStr + "\n\n[2] Buy an engineer : " + engineerStr + "\n\n[3] Buy a gambler : " + gamblerStr + "\n\n[4] Dynamite (doubles miner production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[5] Power Surge (doubles engineer production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[6] Extra Chips (doubles gambler odds)  : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[7] QAFee (doubles everything) : 2500 gold\n\t30 sec duration : 5 min cooldown\n\n\n\n");
 	}
 
-	public static void inventoryUI(){
+	public static String inventoryUIM(int type, ArrayList<Miner> inArr){
+		String x = "";
+		int amtNL = 12;
+		x = "[R]eturn\n\n[M]iners\n\n[E]ngineers\n\n[G]amblers\n\n" + "Name                    Level                    Gold Per Second         Upgrade\n\n";
+		for (Miner h : inArr){
+			if (h.bought()){
+				String[] lineArr = {h.name(), h.level() + "", (h.level() * 3) + "", h.upgrade()};
+				x += TerminalTxtProcessing.lineCenter(1, lineArr);
+				x += "\n";
+				amtNL -= 1;
+			}
+		}
+		x += TerminalTxtProcessing.textRepeater("\n", amtNL);
+		return x;
+	}
 
+	public static String inventoryUIE(int type, ArrayList<Engineer> inArr){
+		String x = "";
+		int amtNL = 12;
+		x = "[R]eturn\n\n[M]iners\n\n[E]ngineers\n\n[G]amblers\n\n" + "Name                    Level                    Gold Per Click          Upgrade\n\n";
+		for (Engineer h : inArr){
+			if (h.bought()){
+				String[] lineArr = {h.name(), h.level() + "", (h.level() * 3) + "", h.upgrade()};
+				x += TerminalTxtProcessing.lineCenter(1, lineArr);
+				x += "\n";
+				amtNL -= 1;
+			}
+		}
+		x += TerminalTxtProcessing.textRepeater("\n", amtNL);
+		return x;
+	}
+
+	public static String inventoryUIG(int type, ArrayList<Gambler> inArr){
+		String x = "";
+		int amtNL = 12;
+		x = "[R]eturn\n\n[M]iners\n\n[E]ngineers\n\n[G]amblers\n\n" + "Name                                                                     Upgrade\n\n";
+		for (Helper h : inArr){
+			if (h.bought()){
+				String[] lineArr = {h.name(), h.upgrade()};
+				x += TerminalTxtProcessing.lineCenter(2, lineArr);
+				x += "\n";
+				amtNL -= 1;
+			}
+		}
+		x += TerminalTxtProcessing.textRepeater("\n", amtNL);
+		return x;
 	}
 
 	public static void noGold(String minerStr, String engineerStr, String gamblerStr){

@@ -34,6 +34,32 @@ public void multiMutate( int multi){ //modifies the multi variable
         _multiGoldPS += multi;
 }
 
+/* For upgrades for Workers:
+ * - All upgrades for addition start off at 1, and are incremented by 2 for a maximum of 5
+ * - All upgrades for multi start off at 0.05, and are incremented bt 0.05 for a max of 0.15
+ */
+
+//Determines the initial upgrades based on the String input
+public void initialUpgrade(String str){
+        if ( str.equals("add") ) {
+                _additionGoldPS += 1;
+                _upgradeType = str;
+        }
+        if ( str.equals("multi") ) {
+                _multiGoldPS = 0.05;
+                _upgradeType = "multi";
+        }
+        upgradeUp();
+}
+
+public void upgradeEffect(){
+        if ( _upgradeType.equals("add") )
+                _additionGoldPS += 2;
+        if ( _upgradeType.equals("multi") )
+                _multiGoldPS += 0.05;
+        upgradeUp();
+}
+
 public static void main(String[] args) {
         /* test code ---------------------------
          * Miner maggie = new Miner("maggie");

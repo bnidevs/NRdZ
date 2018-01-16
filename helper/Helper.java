@@ -60,6 +60,8 @@ public String[] stats(){ //returns the stats of a Helper in a 1-D array
         return stats;
 }
 
+public abstract void upgradeEffect(); //details the actual upgrade for the class
+
 public static void main(String[] args) {
 }
 

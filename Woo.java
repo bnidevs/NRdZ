@@ -152,23 +152,18 @@ public static void tapMech(){
 																								_gold = _gold - data.buy(3);
 																}
 								}else if (keyPress.equals("4")) {
-
-
 																if ( Powerups.isActive("D") ) {
 																								UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Your selected Powerup is still active!");
 																								tapMech();
-																}
-																else{
+																}else{
 																								if ( Powerups.isCoolingDown("D") ) {
 																																UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Your selected Powerup is on cooldown!");
 																																tapMech();
-																								}
-																								else{
+																								}else{
 																																if ( 400 > _gold) { //if not enough gold
 																																								UserInterface.noGold(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)));
 																																								tapMech();
-																																}
-																																else{
+																																}else{
 																																								Powerups.activateDynamite();
 																																								_gold -= 400;
 																																								UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Powerup activated!");
@@ -176,13 +171,66 @@ public static void tapMech(){
 																																}
 																								}
 																}
-
-								}else if (keyPress.equals("5")) {
-
-								}else if (keyPress.equals("6")) {
-
+								}else if (keyPress.equals("5")) { //power surge
+																if ( Powerups.isActive("Pow") ) {
+																								UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Your selected Powerup is still active!");
+																								tapMech();
+																} else{
+																								if ( Powerups.isCoolingDown("Pow") ) {
+																																UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Your selected Powerup is on cooldown!");
+																																tapMech();
+																								}else{
+																																if ( 400 > _gold) { //if not enough gold
+																																								UserInterface.noGold(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)));
+																																								tapMech();
+																																}else{
+																																								Powerups.activatePower();
+																																								_gold -= 400;
+																																								UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Powerup activated!");
+																																								tapMech();
+																																}
+																								}
+																}
+								}else if (keyPress.equals("6")) { //Extra Chips
+																if ( Powerups.isActive("EC") ) {
+																								UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Your selected Powerup is still active!");
+																								tapMech();
+																}else{
+																								if ( Powerups.isCoolingDown("EC") ) {
+																																UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Your selected Powerup is on cooldown!");
+																																tapMech();
+																								}else{
+																																if ( 400 > _gold) { //if not enough gold
+																																								UserInterface.noGold(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)));
+																																								tapMech();
+																																}else{
+																																								Powerups.activateExtra();
+																																								_gold -= 400;
+																																								UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Powerup activated!");
+																																								tapMech();
+																																}
+																								}
+																}
 								}else if (keyPress.equals("7")) {
-
+																if ( Powerups.isActive("QAF") ) {
+																								UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Your selected Powerup is still active!");
+																								tapMech();
+																}else{
+																								if ( Powerups.isCoolingDown("QAF") ) {
+																																UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Your selected Powerup is on cooldown!");
+																																tapMech();
+																								}else{
+																																if ( 2500 > _gold) { //if not enough gold
+																																								UserInterface.noGold(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)));
+																																								tapMech();
+																																}else{
+																																								Powerups.activateQAF();
+																																								_gold -= 2500;
+																																								UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Powerup activated!");
+																																								tapMech();
+																																}
+																								}
+																}
 								}
 
 								_additiveGoldPKP = 1;

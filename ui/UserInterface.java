@@ -164,14 +164,17 @@ public static void storeUIMsg(String minerStr, String engineerStr, String gamble
 }
 
 public static String improveUIM(ArrayList<Miner> inArr){
+								String x = "";
 								int amtNL = 12;
-								String x = "[R]eturn\n[M]iners\n[E]ngineers\n[G]amblers\n\n" + "Name                    Level        Upgrade\n\n";
+								x = "[R]eturn\n\n[M]iners\n\n[E]ngineers\n\n[G]amblers\n\n" + "Name                    Level\t\t              Upgrade\n\n";
+								int n = 0; //use to keep track ofwhat keys to push
 								for (Miner h : inArr) {
 																if (h.bought()) {
-																								String[] lineArr = {h.name(), h.level() + "", h.upgrade()};
+																								String[] lineArr = {h.name(), "[" + n + "] " + h.level(), "[" + (n+1) + "] " + h.upgrade(), ""};
 																								x += TerminalTxtProcessing.lineCenter(1, lineArr);
 																								x += "\n";
 																								amtNL -= 1;
+																								n += 2;
 																}
 								}
 								x += TerminalTxtProcessing.textRepeater("\n", amtNL);
@@ -179,7 +182,21 @@ public static String improveUIM(ArrayList<Miner> inArr){
 }
 
 public static String improveUIE(ArrayList<Engineer> inArr){
-								return "";
+								String x = "";
+								int amtNL = 12;
+								x = "[R]eturn\n\n[M]iners\n\n[E]ngineers\n\n[G]amblers\n\n" + "Name                    Level\t              Upgrade\n\n";
+								int n = 0; //use to keep track ofwhat keys to push
+								for (Engineer h : inArr) {
+																if (h.bought()) {
+																								String[] lineArr = {h.name(), "[" + n + "] " + h.level(), "[" + (n+1) + "] " + h.upgrade(), ""};
+																								x += TerminalTxtProcessing.lineCenter(1, lineArr);
+																								x += "\n";
+																								amtNL -= 1;
+																								n += 2;
+																}
+								}
+								x += TerminalTxtProcessing.textRepeater("\n", amtNL);
+								return x;
 }
 
 public static String improveUIG(ArrayList<Gambler> inArr){

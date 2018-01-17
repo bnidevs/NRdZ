@@ -186,7 +186,7 @@ public class DataStorage {
     	return rtrnArr;
     }
     
-    public static void sortList(ArrayList<Helper> helper, int col) {
+    public static ArrayList<Helper> sortList(ArrayList<Helper> helper, int col) {
 	String[][] store = new String[helper.size()][2];
 	for (int x = 0; x < helper.size(); x ++ ) {
 	    store[x][0] = x + "";
@@ -198,7 +198,7 @@ public class DataStorage {
 	    int spot = Integer.parseInt(store[y][0]);
 	    temp.add(y, helper.get(spot));
 	}
-	helper = temp;
+
 	//	return toString(helper);
     }
   public static void insertionSortV( String[][] data )

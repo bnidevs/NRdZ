@@ -23,6 +23,7 @@ public class Woo {
 	public static boolean status = true;
 	public static boolean tutorialCompleted = false;
 	public static int inventoryType = 1;
+	public static boolean inventoryAscend = true;
 
 	public static long prevTime;
 	public static long currTime;
@@ -100,13 +101,21 @@ public class Woo {
 		}else if (keyPress.equals("I") || keyPress.equals("i")){
 			gameScreen = "inventory";
 		}else if (keyPress.equals("N") || keyPress.equals("n")){ //name
-
+			sortList(data.minerList(), 0);
+			sortList(data.gamblerList(), 0);
+			sortList(data.engineerList(), 0);
 		}else if (keyPress.equals("V") || keyPress.equals("v")){ //value
-
+			sortList(data.minerList(), 2);
+			sortList(data.gamblerList(), 2);
+			sortList(data.engineerList(), 2);
 		}else if (keyPress.equals("L") || keyPress.equals("l")){ //level
-
+			sortList(data.minerList(), 1);
+			sortList(data.gamblerList(), 1);
+			sortList(data.engineerList(), 1);
 		}else if (keyPress.equals("U") || keyPress.equals("u")){ //upgrade tier
-			
+			sortList(data.minerList(), 3);
+			sortList(data.gamblerList(), 3);
+			sortList(data.engineerList(), 3);
 		}else if (keyPress.equals("E") || keyPress.equals("e")){ //display engineers
 			inventoryType = 2;
 		}else if (keyPress.equals("M") || keyPress.equals("m")){ //display miners

@@ -6,33 +6,33 @@ TO-DO LIST
 [] ** Link time to gold production (just a prototype, in class Woo)
 [x] ** Write store so that purchases will give the correct bonus.
 [x] Helpers?
-[] Powerups
+[x] Powerups
 [x] Store
 [x] buy Helpers
 [x] level Helpers
 [x] upgrade Helpers
-[] buy Powerups
-[] Figure out additive/multiplicative bonuses for helpers.
-[] Link sortList() in DataStorage to Keyboard (so that user can choose how they want to sort the list).
+[x] buy Powerups
+[x] Figure out additive/multiplicative bonuses for helpers.
+[x] Link sortList() in DataStorage to Keyboard (so that user can choose how they want to sort the list).
 	[x] Test DataStorage!
-	[] Aestheticize the display
-	[] Program the UI
+	[x] Aestheticize the display
+	[x] Program the UI
 	[x] introUI
 	[x] mainUI
-		[] Key binds for
+		[x] Key binds for
 			- Store
 			- Help
 			- Inventory
 			x Quitting
-	[] storeUI
-	[] helpUI
-[] Create and test Powerups.java
-[] Write RNG events
-	[] + static boolean isEarthquake()
-	[] + static boolean isThunderstorm()
-	[] + static boolean isBankruptcy()
-	[] + static boolean isRobbery()
-	[] + static boolean jackpot(double luck)
+	[x] storeUI
+	[x] helpUI
+[x] Create and test Powerups.java
+[x] Write RNG events
+	[x] + static boolean isEarthquake()
+	[x] + static boolean isThunderstorm()
+	[x] + static boolean isBankruptcy()
+	[x] + static boolean isRobbery()
+	[x] + static boolean jackpot(double luck)
 ** do at the very end
 [] Get unwilling testers and find bugs. (Jason Lin)
-[] Add any extras and finish project!
+[x] Add any extras and finish project!

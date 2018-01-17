@@ -40,16 +40,16 @@ public class Woo {
 
 		while(status){
 			if(gameScreen.equals("main")){
-			    Events.allLuck(_luck);
 				if(_gold == 30 && tutorialCompleted == false){
 					UserInterface.tutorial();
 					tutorialCompleted = true;
 					tapMech();
-				}else if(_gold < 30){
+				}else if(_gold < 30 && tutorialCompleted == false){
 					UserInterface.mainUIpreTut(_gold);
 					tapMech();
 				}else{
 					UserInterface.mainUIpostTut(_gold,_totalGoldPKP,_totalGoldPS);
+					Events.allLuck(_luck);
 					tapMech();
 				}
 			}else if(gameScreen.equals("help")){
@@ -108,9 +108,9 @@ public class Woo {
 		}else if (keyPress.equals("U") || keyPress.equals("u")){ //upgrade tier
 			
 		}else if (keyPress.equals("E") || keyPress.equals("e")){ //display engineers
-			inventoryType = 1;
-		}else if (keyPress.equals("M") || keyPress.equals("m")){ //display miners
 			inventoryType = 2;
+		}else if (keyPress.equals("M") || keyPress.equals("m")){ //display miners
+			inventoryType = 1;
 		}else if (keyPress.equals("G") || keyPress.equals("g")){ //display gamblers
 			inventoryType = 3;
 		}else if (keyPress.equals("1")){

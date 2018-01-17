@@ -4,6 +4,8 @@ import helper.Miner;
 import helper.Worker;
 import helper.Engineer;
 import helper.Gambler;
+import terminalTxt.TerminalTxtProcessing;
+
 public class Events {
 
     public static DataStorage data = new DataStorage();
@@ -32,7 +34,7 @@ public class Events {
 		//if ( ( Math.random() < (1.0 * data.minerList().size() ) /1000) ) {
 		data.minerList().get(remove).kill();
 		
-		System.out.println("Take cover! An earthquake is happening! The fault lines have split apart, and an unlucky miner " + data.minerList().get(remove).name() +" has fallen in, never to be seen again. He no longer produces gold for you. If you would like to regain " + data.minerList().get(remove).name() + ", buy him again from the store. (Type [S] + [enter].)");
+		System.out.println("An earthquake shakes the planet to its very core.\nAlthough you have geared your miners to the brim, " + data.minerList().get(remove).name() + " has died.\nYou can buy " + data.minerList().get(remove).name() + " again." + TerminalTxtProcessing.textRepeater("\n", 20));
 	    }
 	}
     }
@@ -50,7 +52,7 @@ public class Events {
 		//if ( Math.random() < 1.0/1000 ) {
             data.engineerList().get(remove).kill();
 	    
-	    System.out.println("Thunder and lightning, very very frightening! \n Due to the lack of lightning rods, a stray lightning bolt has struck down " + data.engineerList().get(remove).name() + ". He no longer produces gold for you. If you would like to regain " + data.engineerList().get(remove).name() + ", buy him again from the store. (Type [S] + [enter].)");
+	    System.out.println("A cold front becomes the bearer of bad news for your engineers.\n Lightning arcs through the sky and strikes " + data.engineerList().get(remove).name() + ".\nYou can buy " + data.engineerList().get(remove).name() + " again." + TerminalTxtProcessing.textRepeater("\n", 20));
 	    }
 	}
     }
@@ -69,7 +71,7 @@ public class Events {
 	    //if (Math.random() < 1.0/1000 ) {
 		data.gamblerList().get(remove).kill();
 	
-		System.out.println("Gamblers beware! Your casino, owned by Konald Strump, has been foreclosed. Many casino-goers are unhappy, including " + data.gamblerList().get(remove).name() +  ", who has sworn off your casino. If you would like to regain " + data.gamblerList().get(remove).name() + ", buy him again from the store. (Type [S] + [enter].)");
+		System.out.println("Quite a serendipitous day.\n" + data.gamblerList().get(remove).name() +  " has been caught cheating at the local casino.\nHe is deprived of all his chips at the moment.\nYou can buy " + data.gamblerList().get(remove).name() + " again." + TerminalTxtProcessing.textRepeater("\n", 19));
 	    }
 	}
 
@@ -80,7 +82,7 @@ public class Events {
 	    //if ( ( Math.random() < 1.0/1000) && ( Math.random() < 1.0/1000) ) {
 	    Woo._gold = 0;
 
-	    System.out.println("Uh-oh! A careless intern left your Swiss vaults open, and your rival company, Doofenshmirtz Evil Incorporated, has stolen your company secrets. Fortunately, all of your helpers have stayed with you despite the hardships. Your only solution is to continue accruing your gold, until you can get revenge on Mr. Doofenshmirtz...");
+	    System.out.println("Oh no! Your bank vault is empty!\nUntil the police find out who did it, you'll have to make do with nothing." + TerminalTxtProcessing.textRepeater("\n", 21));
 	}
     }
 
@@ -93,7 +95,7 @@ public class Events {
 	    Woo._gold += won;
 	
 
-	System.out.println("I'm up all night to get lucky. \n It's your lucky day! Your great uncle, on your mother's side, has died with no relatives to pass his inheritance to. The rest of his money, "+ won + " gold, was left to \"His favorite relative\" in his will.");
+	System.out.println("One of your gamblers actually won the lottery!\nDon't worry, it's just a hobby.\nBut he has decided to give you a large portion of it!\n" + won + " gold to be exact!" + TerminalTxtProcessing.textRepeater("\n", 19));
 	}    
     }
 

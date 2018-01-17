@@ -113,7 +113,7 @@ public static String inventoryUIM(int type, ArrayList<Miner> inArr){
 								x = "[R]eturn\n\n[M]iners\n\n[E]ngineers\n\n[G]amblers\n\n" + "Name                    Level                    Gold Per Second         Upgrade\n\n";
 								for (Miner h : inArr) {
 																if (h.bought()) {
-																								String[] lineArr = {h.name(), h.level() + "", (h.level() * 3) + "", h.upgrade()};
+																								String[] lineArr = {h.name(), h.level() + "", (h.level() * 3) + "", h.upgrade() + "(" + h.upgradeType() + ")"};
 																								x += TerminalTxtProcessing.lineCenter(1, lineArr);
 																								x += "\n";
 																								amtNL -= 1;
@@ -129,7 +129,7 @@ public static String inventoryUIE(int type, ArrayList<Engineer> inArr){
 								x = "[R]eturn\n\n[M]iners\n\n[E]ngineers\n\n[G]amblers\n\n" + "Name                    Level                    Gold Per Click          Upgrade\n\n";
 								for (Engineer h : inArr) {
 																if (h.bought()) {
-																								String[] lineArr = {h.name(), h.level() + "", (h.level() * 3) + "", h.upgrade()};
+																								String[] lineArr = {h.name(), h.level() + "", (h.level() * 3) + "", h.upgrade() + "(" + h.upgradeType() + ")"};
 																								x += TerminalTxtProcessing.lineCenter(1, lineArr);
 																								x += "\n";
 																								amtNL -= 1;

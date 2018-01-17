@@ -210,7 +210,7 @@ public static String improveUIG(ArrayList<Gambler> inArr){
 																								x += TerminalTxtProcessing.lineCenter(2, lineArr);
 																								x += "\n";
 																								amtNL -= 1;
-																								n += 1;
+																								n += 2;
 																}
 								}
 								x += TerminalTxtProcessing.textRepeater("\n", amtNL);

@@ -238,7 +238,7 @@ public static void tapMech(){
         }
 // call another function if need to upgrade
         else if (keyPress.equals("8")) {
-                UserInterface.improveUIM(data.minerList());
+                System.out.println( UserInterface.improveUIM(data.minerList()) );
                 improveMech();
         }
         _additiveGoldPKP = 1;

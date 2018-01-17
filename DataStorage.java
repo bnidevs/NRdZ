@@ -199,20 +199,20 @@ public class DataStorage {
     }
     
     public static ArrayList<Helper> sortList(ArrayList<Helper> helper, int col) {
-	String[][] store = new String[helper.size()][2];
-	for (int x = 0; x < helper.size(); x ++ ) {
-	    store[x][0] = x + "";
-	    store[x][1] = helper.get(x).stats()[col];
-	}
-	insertionSortV(store); 
-	ArrayList<Helper>temp = new ArrayList<Helper>(helper.size());
-	for (int y = 0; y < helper.size(); y++) {
-	    int spot = Integer.parseInt(store[y][0]);
-	    temp.add(y, helper.get(spot));
-	}
-
-	//	return toString(helper);
+    	String[][] store = new String[helper.size()][2];
+    	for (int x = 0; x < helper.size(); x ++ ) {
+    	    store[x][0] = x + "";
+    	    store[x][1] = helper.get(x).stats()[col];
+    	}
+	   insertionSortV(store); 
+	   ArrayList<Helper>temp = new ArrayList<Helper>(helper.size());
+    	for (int y = 0; y < helper.size(); y++) {
+    	    int spot = Integer.parseInt(store[y][0]);
+    	    temp.add(y, helper.get(spot));
+    	}
+        return temp;
     }
+    
   public static void insertionSortV( String[][] data )
     {
 	for( int partition = 1; partition < data.length; partition++ ) {

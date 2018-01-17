@@ -60,7 +60,7 @@ public class DataStorage {
     }
     // ACCESSORS =============================================      
     public ArrayList<Miner> minerList(){
-	return _miners;
+	   return _miners;
     }
 
     public ArrayList<Engineer> engineerList(){
@@ -69,6 +69,18 @@ public class DataStorage {
     
     public ArrayList<Gambler> gamblerList(){
         return _gamblers;
+    }
+
+    public void minerEdit(ArrayList<Miner> m){
+        _miners = m;
+    }
+
+    public void engineerEdit(ArrayList<Miner> e){
+        _engineers = e;
+    }
+
+    public void gamblerEdit(ArrayList<Miner> g){
+        _gamblers = g;
     }
     
     // METHODS =============================================

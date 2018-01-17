@@ -11,24 +11,28 @@ public class Events {
     public static DataStorage data = new DataStorage();
     
     public static boolean isUnfortunate( double curse) {
+	// boolean for unlucky events, can be modified with "curse" (really only used in earthquake(), the event for miners)
 	if (Math.random() < (1.0 * curse )/50 )
 	    return true;
 	return false;
     }
     
     public static boolean isFortunate( double luck ) {
+	// boolean for the only lucky event, can be modified with "luck" variable
 	if (Math.random() < luck)
 	    return true;
 	return false;
     }
 
     public static void earthquake() {
+	// new ArrayList that keeps track of all the Miners that have been purchased (and are thus available to be killed off).
 	ArrayList<Miner> have = new ArrayList<Miner>();
 	for (int i = 0; i < data.minerList().size(); i++ ) {
 	    if (data.minerList().get(i).bought())
 		have.add(data.minerList().get(i));
 	}
 	if (have.size() > 0 ) {
+	    // chooses random Miner to "kill" --> it's status is reverted to unbought.
 	    int remove = (int) (Math.random() * have.size());
 	    if ( isUnfortunate (data.minerList().size() ) ) {
 		//if ( ( Math.random() < (1.0 * data.minerList().size() ) /1000) ) {
@@ -40,12 +44,13 @@ public class Events {
     }
 
     public static void thunderstorm() {
+ // new ArrayList that keeps track of all the Engineers that have been purchased (and are thus available to be killed off). 
 	ArrayList<Engineer> have = new ArrayList<Engineer>();
         for (int i = 0; i < data.engineerList().size(); i++ ) {
             if (data.engineerList().get(i).bought())
                 have.add(data.engineerList().get(i));
 	}
-
+	// chooses random Engineer to "kill" --> it's status is reverted to unbought.       
 	if (have.size() > 0 ) {
 	    int remove = (int) (Math.random() * have.size());
 	    if ( isUnfortunate ( 1) ) {
@@ -58,13 +63,13 @@ public class Events {
     }
 
     public static void bankruptcy() {
-	
+	 // new ArrayList that keeps track of all the Gamblers that have been purchased (and are thus available to be killed off). 
 	ArrayList<Gambler> have = new ArrayList<Gambler>();
         for (int i = 0; i < data.gamblerList().size(); i++ ) {
             if (data.gamblerList().get(i).bought())
                 have.add(data.gamblerList().get(i));
         }
-
+	// chooses random Gambler to "kill" --> it's status is reverted to unbought.       
 	if (have.size() > 0 ) {
 	    int remove = (int) (Math.random() * have.size());
 	    if ( isUnfortunate (1)) {
@@ -78,8 +83,9 @@ public class Events {
     }
 
     public static void robbed() {
+	// 1/2500 chance for all gold to disappear
 	if ( isUnfortunate(1) && isUnfortunate(1)) {
-	    //if ( ( Math.random() < 1.0/1000) && ( Math.random() < 1.0/1000) ) {
+	    //if ( ( Math.random() < 1.0/1000) && ( Math.random() < 1.0/1000)){
 	    Woo._gold = 0;
 
 	    System.out.println("Oh no! Your bank vault is empty!\nUntil the police find out who did it, you'll have to make do with nothing." + TerminalTxtProcessing.textRepeater("\n", 21));
@@ -87,13 +93,14 @@ public class Events {
     }
 
     public static void jackpot(double luck) {
+	// creates a random amount gold to be won
 	int won = 0;
 	if ( isFortunate(luck) ) {
 	    double lucky1 = Math.random() * 10;
 	    int lucky2 = (int) (Math.random() * 1000);
 	    won =  (int) ((Woo._gold * lucky1) + lucky2);
 	    Woo._gold += won;
-	
+	    
 
 	System.out.println("One of your gamblers actually won the lottery!\nDon't worry, it's just a hobby.\nBut he has decided to give you a large portion of it!\n" + won + " gold to be exact!" + TerminalTxtProcessing.textRepeater("\n", 19));
 	}    

@@ -186,23 +186,22 @@ public class DataStorage {
     	return rtrnArr;
     }
     
-    public static String sortList(ArrayList<String[]> helper, int col) {
-	String[][] names = new String[helper.size()][2];
+    public static void sortList(ArrayList<Helper> helper, int col) {
+	String[][] store = new String[helper.size()][2];
 	for (int x = 0; x < helper.size(); x ++ ) {
-	    names[x][0] = x + "";
-	    names[x][1] = helper.get(x)[col];
+	    store[x][0] = x + "";
+	    store[x][1] = helper.get(x).stats()[col];
 	}
-	insertionSortV(names); 
-	ArrayList<String[]>temp = new ArrayList<String[]>(helper.size());
+	insertionSortV(store); 
+	ArrayList<Helper>temp = new ArrayList<Helper>(helper.size());
 	for (int y = 0; y < helper.size(); y++) {
-	    int spot = Integer.parseInt(names[y][0]);
+	    int spot = Integer.parseInt(store[y][0]);
 	    temp.add(y, helper.get(spot));
 	}
 	helper = temp;
-	return toString(helper);
+	//	return toString(helper);
     }
-
-    public static void insertionSortV( String[][] data )
+  public static void insertionSortV( String[][] data )
     {
 	for( int partition = 1; partition < data.length; partition++ ) {
 	    for( int i = partition; i > 0; i-- ) {
@@ -235,7 +234,35 @@ public class DataStorage {
             }
 	}
     }//end insertionSortV
+    /**
+    public static void insertionSortV( ArrayList<Helper> data)
+    {
+	for (int partition = 1; partition < data.size() ; partition ++ ) {
+	    for (int i = partition; i > 0; i --) {
+		if (Character.isDigit( data.get(i)[1].charAt(0))) {
+		    int first = Integer.parseInt(data.get(i-1)[1]);
+		    int second = Integer.parseInt(data.get(i)[1]);
+		    if (second < first) {
+			data.set(i,data.set( i-1, data.get(i)));
+		    }
+		    else
+			break;
+		}
 
+		else {
+		    
+		    String first = data.get(i)[1];
+		    String second = data.get(i)[1];
+		    if ( (second).compareTo(first) < 0) {
+			data.set(i,data.set( i-1, data.get(i)));
+		    }
+		    else
+			break;
+		}
+	    }
+	}
+    }//end insertionSortV
+    **/
     public static void main(String[] args) {}
     
 } //end class DataStorage

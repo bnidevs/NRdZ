@@ -46,20 +46,43 @@ public static void activateQAF(){
 
 //chacks to see if a certain powerup is active
 public static boolean isActive( String name ){
+  long time = System.currentTimeMillis();
         if ( name.equals("D") ) { //for checking dynamite
-                if( endD > startD)
+                if( endD > time)
                         return true;
         }
         else if ( name.equals("Pow") ) { //for checking Power Surge
-                if( endPS > startPS)
+                if( endPS > time)
                         return true;
         }
         else if ( name.equals("EC") ) { //for checking Extra Chips
-                if( endEC > startEC)
+                if( endEC > time)
                         return true;
         }
         else if ( name.equals("QAF") ) { //for checking QAFee
-                if( endQAF > startQAF)
+                if( endQAF > time)
+                        return true;
+        }
+        return false; //if the event in question fails, then return false
+}
+
+//chacks to see if a certain powerup is active
+public static boolean isCoolingDown( String name ){
+  long time = System.currentTimeMillis();
+        if ( name.equals("D") ) { //for checking dynamite
+                if( coolD > time)
+                        return true;
+        }
+        else if ( name.equals("Pow") ) { //for checking Power Surge
+                if( coolPS > time)
+                        return true;
+        }
+        else if ( name.equals("EC") ) { //for checking Extra Chips
+                if( coolEC > time)
+                        return true;
+        }
+        else if ( name.equals("QAF") ) { //for checking QAFee
+                if( coolQAF > time)
                         return true;
         }
         return false; //if the event in question fails, then return false

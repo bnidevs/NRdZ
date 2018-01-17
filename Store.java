@@ -11,12 +11,12 @@ public class Store {
  * Note that "bill" is a placeholder
  */
 
-public void levelMiner( Miner m ){
+public static void levelMiner( Miner m ){
         m.levelUp(); //indicates the Miner has leveled
         m.addMutate(5); //increases the rate
 }
 
-public void levelEngineer( Engineer e ){
+public static void levelEngineer( Engineer e ){
         e.levelUp(); //indicates the Engineer has leveled
         e.addMutate(5); //increases the rate
 }
@@ -26,10 +26,10 @@ public void levelEngineer( Engineer e ){
  *
  *  post-conditions: - The Helper entered now has an Upgrade
  */
-public void upgradeMiner( Miner m ){
+public static void upgradeMiner( Miner m ){
         if ( m.upgrade().equals("0") ) {
                 System.out.print("Choose what upgrade path ");
-                System.out.print( m.name() );
+		System.out.print( m.name() );
                 System.out.println("will take!");
                 System.out.println( "To select one, type either \"add\" or \"multi\"!");
                 String input = Keyboard.readString();
@@ -39,7 +39,7 @@ public void upgradeMiner( Miner m ){
         m.upgradeEffect();
 }
 
-public void upgradeEngineer( Engineer e ){
+public static void upgradeEngineer( Engineer e ){
         if ( e.upgrade().equals("0") ) {
                 System.out.print("Choose what upgrade path ");
                 System.out.print( e.name() );
@@ -53,7 +53,7 @@ public void upgradeEngineer( Engineer e ){
 }
 
 //no input is needed, since the Gambler is not producing
-public void upgradeGambler( Gambler g ){
+public static void upgradeGambler( Gambler g ){
         g.upgradeEffect();
 }
 

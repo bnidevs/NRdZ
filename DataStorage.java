@@ -9,9 +9,9 @@ public class DataStorage {
     
     // 2-D array with a list of helpers of that type, detailing their names, levels, upgrades, and upgrade type
 
-    private ArrayList<Helper> _miners;
-    private ArrayList<Helper> _engineers;
-    private ArrayList<Helper> _gamblers;
+    private ArrayList<Miner> _miners;
+    private ArrayList<Engineer> _engineers;
+    private ArrayList<Gambler> _gamblers;
 
   
     public DataStorage(){
@@ -59,15 +59,15 @@ public class DataStorage {
 
     }
     // ACCESSORS =============================================      
-    public ArrayList<Helper> minerList(){
+    public ArrayList<Miner> minerList(){
 	   return _miners;
     }
 
-    public ArrayList<Helper> engineerList(){
+    public ArrayList<Engineer> engineerList(){
         return _engineers;
     }
     
-    public ArrayList<Helper> gamblerList(){
+    public ArrayList<Gambler> gamblerList(){
         return _gamblers;
     }
 

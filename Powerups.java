@@ -22,6 +22,7 @@ public static void activateDynamite(){
         startD = System.currentTimeMillis();
         endD = startD + 30000; //set the end time to 30 seconds after the current time
         coolD = endD + 100000; //set the cooldown time to 1 minute after the end time
+        Woo._multiGoldPS *= 2;
 }
 
 //activates the PowerSurge powerup
@@ -29,6 +30,7 @@ public static void activatePower(){
         startPS = System.currentTimeMillis();
         endPS = startPS + 30000; //set the end time to 30 seconds after the current time
         coolPS = endPS + 100000; //set the cooldown time to 1 minute after the end time
+        Woo._multiGoldPKP *= 2;
 }
 
 //activates Extra Chips
@@ -36,17 +38,22 @@ public static void activateExtra(){
         startEC = System.currentTimeMillis();
         endEC = startEC + 30000; //set the end time to 30 seconds after the current time
         coolEC = endEC + 100000; //set the cooldown time to 1 minute after the end time
+        Woo._luck *= 2;
 }
 
 public static void activateQAF(){
         startQAF = System.currentTimeMillis();
         endQAF = startQAF + 30000; //set the end time to 30 seconds after the current time
         coolQAF = endQAF + 500000; //set the cooldown time to 5 minutes after the end time
+        Woo._multiGoldPS *= 2;
+        Woo._multiGoldPKP *= 2;
+        Woo._luck *= 2;
+
 }
 
 //chacks to see if a certain powerup is active
 public static boolean isActive( String name ){
-  long time = System.currentTimeMillis();
+        long time = System.currentTimeMillis();
         if ( name.equals("D") ) { //for checking dynamite
                 if( endD > time)
                         return true;
@@ -68,7 +75,7 @@ public static boolean isActive( String name ){
 
 //chacks to see if a certain powerup is active
 public static boolean isCoolingDown( String name ){
-  long time = System.currentTimeMillis();
+        long time = System.currentTimeMillis();
         if ( name.equals("D") ) { //for checking dynamite
                 if( coolD > time)
                         return true;

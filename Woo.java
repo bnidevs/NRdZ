@@ -73,7 +73,7 @@ public class Woo {
 	}
 
 	public static void tapMech(){
-	    
+
 		_additiveGoldPKP += data.goldProductionUpdate().get(2);
 		_multiGoldPKP += data.goldProductionUpdate().get(3);
 
@@ -100,6 +100,7 @@ public class Woo {
 			gameScreen = "store";
 		}else if (keyPress.equals("I") || keyPress.equals("i")){
 			gameScreen = "inventory";
+			/*
 		}else if (keyPress.equals("N") || keyPress.equals("n")){ //name
 			data.minerEdit(DataStorage.sortList(data.minerList(), 0));
 			data.engineerEdit(DataStorage.sortList(data.gamblerList(), 0));
@@ -116,6 +117,7 @@ public class Woo {
 			data.minerEdit(DataStorage.sortList(data.minerList(), 3));
 			data.engineerEdit(DataStorage.sortList(data.gamblerList(), 3));
 			data.gamblerEdit(DataStorage.sortList(data.engineerList(), 3));
+			*/
 		}else if (keyPress.equals("E") || keyPress.equals("e")){ //display engineers
 			inventoryType = 2;
 		}else if (keyPress.equals("M") || keyPress.equals("m")){ //display miners
@@ -150,7 +152,27 @@ public class Woo {
 				_gold = _gold - data.buy(3);
 			}
 		}else if (keyPress.equals("4")){
-			
+			if ( 400 > _gold){ //if not enough gold
+			UserInterface.noGold(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)));
+			tapMech();
+		}
+			else{
+				if ( Powerups.isActive("D") )
+					UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Your selected Powerup is still active!");
+					tapMech();
+				else{
+					if ( Powerups.isCoolingDown("D") ){
+						UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Your selected Powerup is on cooldown!");
+						tapMech();
+					}
+					else{
+						Powerups.activateDynamite();
+						_gold -= 400;
+						UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Powerup activated!");
+						tapMech();
+						}
+				}
+}
 		}else if (keyPress.equals("5")){
 
 		}else if (keyPress.equals("6")){

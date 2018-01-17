@@ -12,11 +12,13 @@ public class Store {
  */
 
 public static void levelMiner( Miner m ){
+        Woo._gold -= Math.pow(m.level(), 3); //deduct the current level ^ 3 from gold
         m.levelUp(); //indicates the Miner has leveled
         m.addMutate(5); //increases the rate
 }
 
 public static void levelEngineer( Engineer e ){
+        Woo._gold -= Math.pow(e.level(), 3); //deduct the current level ^ 3 from gold
         e.levelUp(); //indicates the Engineer has leveled
         e.addMutate(5); //increases the rate
 }
@@ -33,9 +35,11 @@ public static void upgradeMiner( Miner m ){
                 System.out.println("will take!");
                 System.out.println( "To select one, type either \"add\" or \"multi\"!");
                 String input = Keyboard.readString();
+                Woo._gold -= 10000; //flat rate of 10000 gold deducted
                 m.initialUpgrade(input);
                 return;
         }
+        Woo._gold -= 10000;
         m.upgradeEffect();
 }
 
@@ -46,14 +50,17 @@ public static void upgradeEngineer( Engineer e ){
                 System.out.println("will take!");
                 System.out.println( "To select one, type either \"add\" or \"multi\"!");
                 String input = Keyboard.readString();
+                Woo._gold -= 10000;
                 e.initialUpgrade(input);
                 return;
         }
+        Woo._gold -= 10000;
         e.upgradeEffect();
 }
 
 //no input is needed, since the Gambler is not producing
 public static void upgradeGambler( Gambler g ){
+        Woo._gold -= 10000;
         g.upgradeEffect();
 }
 

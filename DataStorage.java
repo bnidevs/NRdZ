@@ -198,18 +198,48 @@ public class DataStorage {
     	return rtrnArr;
     }
     
-    public static ArrayList<Helper> sortList(ArrayList<Helper> helper, int col) {
-    	String[][] store = new String[helper.size()][2];
-    	for (int x = 0; x < helper.size(); x ++ ) {
+    public static ArrayList<Miner> sortListM(ArrayList<Miner> minerArr, int col) {
+    	String[][] store = new String[minerArr.size()][2];
+    	for (int x = 0; x < minerArr.size(); x ++ ) {
     	    store[x][0] = x + "";
-    	    store[x][1] = helper.get(x).stats()[col];
+    	    store[x][1] = minerArr.get(x).stats()[col];
     	}
 	   insertionSortV(store); 
-	   ArrayList<Helper>temp = new ArrayList<Helper>(helper.size());
-    	for (int y = 0; y < helper.size(); y++) {
+	   ArrayList<Miner>temp = new ArrayList<Miner>(minerArr.size());
+    	for (int y = 0; y < minerArr.size(); y++) {
     	    int spot = Integer.parseInt(store[y][0]);
-    	    temp.add(y, helper.get(spot));
+    	    temp.add(y, minerArr.get(spot));
     	}
+        return temp;
+    }
+
+    public static ArrayList<Engineer> sortListE(ArrayList<Engineer> engArr, int col) {
+        String[][] store = new String[engArr.size()][2];
+        for (int x = 0; x < engArr.size(); x ++ ) {
+            store[x][0] = x + "";
+            store[x][1] = engArr.get(x).stats()[col];
+        }
+       insertionSortV(store); 
+       ArrayList<Engineer>temp = new ArrayList<Engineer>(engArr.size());
+        for (int y = 0; y < engArr.size(); y++) {
+            int spot = Integer.parseInt(store[y][0]);
+            temp.add(y, engArr.get(spot));
+        }
+        return temp;
+    }
+
+    public static ArrayList<Gambler> sortListG(ArrayList<Gambler> gamArr, int col) {
+        String[][] store = new String[gamArr.size()][2];
+        for (int x = 0; x < gamArr.size(); x ++ ) {
+            store[x][0] = x + "";
+            store[x][1] = gamArr.get(x).stats()[col];
+        }
+       insertionSortV(store); 
+       ArrayList<Gambler>temp = new ArrayList<Gambler>(gamArr.size());
+        for (int y = 0; y < gamArr.size(); y++) {
+            int spot = Integer.parseInt(store[y][0]);
+            temp.add(y, gamArr.get(spot));
+        }
         return temp;
     }
     

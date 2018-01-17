@@ -51,6 +51,29 @@ public static void activateQAF(){
 
 }
 
+public static boolean finishPowerUps(){
+        long time = System.currentTimeMillis();
+        if (time >= endD) { //end Dynamite
+                Woo._multiGoldPS /= 2;
+                return true;
+        }
+        if (time >= endPS) { //end Power Surge
+                Woo._multiGoldPKP /= 2;
+                return true;
+        }
+        if (time >= endEC) { //end Extra Chips
+                Woo._luck /= 2;
+                return true;
+        }
+        if (time >= endQAF) { //end QAFee
+                Woo._multiGoldPS /= 2;
+                Woo._multiGoldPKP /= 2;
+                Woo._luck /= 2;
+                return true;
+        }
+        return false;
+}
+
 //chacks to see if a certain powerup is active
 public static boolean isActive( String name ){
         long time = System.currentTimeMillis();

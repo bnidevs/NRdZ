@@ -49,7 +49,10 @@ public static void main(String[] args) {
 																																UserInterface.mainUIpreTut(_gold);
 																																tapMech();
 																								}else{
-																																UserInterface.mainUIpostTut(_gold,_totalGoldPKP,_totalGoldPS);
+																																if ( Powerups.finishPowerUps() )  //if there are any powerups, then this will notify the user
+																																								UserInterface.mainUIpostTutPow(_gold,_totalGoldPKP,_totalGoldPS);
+																																else
+																																								UserInterface.mainUIpostTut(_gold,_totalGoldPKP,_totalGoldPS);
 																																Events.allLuck(_luck);
 																																tapMech();
 																								}
@@ -234,11 +237,7 @@ public static void tapMech(){
 								}
 
 								_additiveGoldPKP = 1;
-								_multiGoldPKP = 1;
-
 								_additiveGoldPS = 0;
-								_multiGoldPS = 1;
-
 								_luck = 0.0005;
 }
 

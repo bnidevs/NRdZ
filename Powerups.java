@@ -59,22 +59,28 @@ public static void activateQAF(){
 public static boolean finishPowerUps(){
         long time = System.currentTimeMillis();
         if ( powerupCounter > 0 ) {
-                if (time >= endD) { //end Dynamite
+                if (time >= endD && endD != 0) { //end Dynamite
+                        //System.out.println(time);
+                        //System.out.println(endD);
                         Woo._multiGoldPS /= 2;
+                        endD = 0; // this prevents a bug in which the system keeps halving the gold rate from occuring
                         return true;
                 }
-                if (time >= endPS) { //end Power Surge
+                if (time >= endPS && endPS != 0) { //end Power Surge
                         Woo._multiGoldPKP /= 2;
+                        endPS = 0; // this prevents a bug in which the system keeps halving the gold rate from occuring
                         return true;
                 }
-                if (time >= endEC) { //end Extra Chips
+                if (time >= endEC && endEC != 0) { //end Extra Chips
                         Woo._luck /= 2;
+                        endEC = 0; // this prevents a bug in which the system keeps halving the gold rate from occuring
                         return true;
                 }
-                if (time >= endQAF) { //end QAFee
+                if (time >= endQAF && endQAF != 0) { //end QAFee
                         Woo._multiGoldPS /= 2;
                         Woo._multiGoldPKP /= 2;
                         Woo._luck /= 2;
+                        endQAF = 0; // this prevents a bug in which the system keeps halving the gold rate from occuring
                         return true;
                 }
         }

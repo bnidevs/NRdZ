@@ -9,7 +9,7 @@ public class Events {
     public static DataStorage data = new DataStorage();
     
     public static boolean isUnfortunate( double curse) {
-	if (Math.random() < (1.0 * curse )/100 )
+	if (Math.random() < (1.0 * curse )/10 )
 	    return true;
 	return false;
     }

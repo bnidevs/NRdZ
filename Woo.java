@@ -272,7 +272,9 @@ public static void improveMech( int mode) {
         else if ( keyPress.equals("1") ) {
                 if (mode == 0) {
                         Store.upgradeMiner( data.minerList().get(0) );
-                        improveMech(0);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 if (mode == 1) {
                         Store.upgradeEngineer( data.engineerList().get(0) );
@@ -287,7 +289,9 @@ public static void improveMech( int mode) {
 
                 if (mode == 0) {
                         Store.levelMiner( data.minerList().get(0) );
-                        improveMech(0);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 else  {
                         Store.levelEngineer( data.engineerList().get(0) );
@@ -297,7 +301,9 @@ public static void improveMech( int mode) {
         else if ( keyPress.equals("3") ) {
                 if (mode == 0) {
                         Store.upgradeMiner( data.minerList().get(1) );
-                        improveMech(0);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 if (mode == 1) {
                         Store.upgradeEngineer( data.engineerList().get(1) );
@@ -312,7 +318,9 @@ public static void improveMech( int mode) {
         else if ( keyPress.equals("2") ) {
                 if (mode == 0) {
                         Store.levelMiner( data.minerList().get(1) );
-                        improveMech(0);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 else  {
                         Store.levelEngineer( data.engineerList().get(1) );
@@ -323,7 +331,9 @@ public static void improveMech( int mode) {
         else if ( keyPress.equals("5")) {
                 if (mode == 0) {
                         Store.upgradeMiner( data.minerList().get(2) );
-                        improveMech(0);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 if (mode == 1) {
                         Store.upgradeEngineer( data.engineerList().get(2) );
@@ -338,7 +348,9 @@ public static void improveMech( int mode) {
         else if ( keyPress.equals("4")) {
                 if (mode == 0) {
                         Store.levelMiner( data.minerList().get(2) );
-                        improveMech(0);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 else  {
                         Store.levelEngineer( data.engineerList().get(2) );
@@ -349,7 +361,9 @@ public static void improveMech( int mode) {
         else if ( keyPress.equals("7")) {
                 if (mode == 0) {
                         Store.upgradeMiner( data.minerList().get(3) );
-                        improveMech(0);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 if (mode == 1) {
                         Store.upgradeEngineer( data.engineerList().get(3) );
@@ -363,7 +377,9 @@ public static void improveMech( int mode) {
         else if ( keyPress.equals("6")) {
                 if (mode == 0) {
                         Store.levelMiner( data.minerList().get(3) );
-                        improveMech(0);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 else  {
                         Store.levelEngineer( data.engineerList().get(3) );
@@ -374,7 +390,9 @@ public static void improveMech( int mode) {
         else if ( keyPress.equals("9")) {
                 if (mode == 0) {
                         Store.upgradeMiner( data.minerList().get(4) );
-                        improveMech(0);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 if (mode == 1) {
                         Store.upgradeEngineer( data.engineerList().get(4) );
@@ -389,7 +407,9 @@ public static void improveMech( int mode) {
         else if ( keyPress.equals("8")) {
                 if (mode == 0) {
                         Store.levelMiner( data.minerList().get(4) );
-                        improveMech(0);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 else  {
                         Store.levelEngineer( data.engineerList().get(4) );

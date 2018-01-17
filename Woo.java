@@ -264,10 +264,10 @@ public static void improveMech( int mode) {
                 System.out.println( UserInterface.improveUIE(data.engineerList()) );
                 improveMech(1);
         }
-        // return to main screen
+        // return to the Shop screen
         else if ( keyPress.equals("R") || keyPress.equals("r") ) {
-                UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                gameScreen = "main";
+                UserInterface.storeUI(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)));
+                gameScreen = "shop";
                 tapMech();
         }
         else if ( keyPress.equals("1") ) {

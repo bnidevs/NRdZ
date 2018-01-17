@@ -1,59 +1,53 @@
-<Team Name (without word "team")>
+NRdZ
 Bill Ni
 Raunak Chowdhury
 Maggie Zhao
 pd 2
 ---------------------
-<Project>
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-USAGE:
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete these instructions once all teammates understand usage.
-  (from tilde bar above to tilde bar below)
-
-devlog--
-Use keyboard shortcut to jump to end,
- replicate entry template,
- modify appropriately.
-
-zone of reflection--
-Flesh out each category whenever necessary, appropriate.
- Need not be fully filled in until end of project,
- but best done as you go along.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+"Goldfinger"
+This project simulates the mechanics of the games Tap Titans and Cookie Clicker, with the theme AdVenture Capitalist. The primary objective here is to create a corporate empire with hundreds of Helpers and to amass lots of gold, while staving off natural disasters and robberies.
 
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<Wow, we so BOSS bc...>
+- A lot of our code has independent processes, but we were able to cobble it together into one cohesive program.
+
+- Animation! We wanted something that would look better than plain words on the screen, and we hope our ASCII art illustrates that and makes our game more enticing to the player.
+
+- We were able to have gold passively collected with a timestamp mechanism in order to count how many seconds passed between each key press (used to calculate total gold earned) and also to time the cooldown of the powerups. 
+
+- Learning to coordinate our time between the main branch of the project (Woo.java and DataStorage.java) and our own individual work. We had to substitute placeholders, where our groupmates would contribute to later, and then mesh our own code with the work of our peers. 
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
->
+- For the first "click", there is a random number that shows up on the screen, but it is ficked by the next "click". (Where'd it come from, where'd it go?)
+- Visual bug persists- after purchasing an upgrade or a new miner, there will be a jump in gold production rates which last for one frame.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<wow! oo! etc!...>
+- You *can* make ArrayLists of arrays.
+- You can use an instantiated object to store everything.
+- We simulated keybinding (similarly to how it works in Tap Titans).
+
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We changed ___ to ___ bc...
-<etc>
-<etc>
+- We decided to limit total amount of miners, engineers, and gamblers to 5 of each because we didn't take into account terminal size at first. 
+
+- We switched around DataStorage to implement 2D arrays, ArrayLists, and ArrayLists with arrays. We finally settled on just ArrayLists of helpers, which had a 1D array as an instantiated variable within the class. This version was simpler to use and follow in the code.
+
+- We added an introductory animation to liven up our code and explain the basics to the user. We figured it was more interesting than just plain text. 
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<tales of wisdom gained...>
+- Always have hard copies of your work (uml, flowchart, proposal, etc.) to mark up things you like and/or want to change. You can translate more thoughts to paper by marking things physically (rather than digitally). 
+  which leads me to my second point...
+- Paper trails! Hashing out ideas in person is always great, but leave note of what you talked about in said meeting, so you can refer back to your ideas.
+- As great as video calls are, they suck up a lot of time and focus. We ended up sitting in silence most of the time. Try not to do them unless strictly necessary (i.e. there are points that need clarifying that are difficult to do via text).
+- Stick to your deadlines. Aim to finish paper things first, and your code will follow from there. Also try to finish code at least 2 days before it is due. 
+- Always organize! Comment to make things clearer to yourself and your groupmates.
+- Write good commit messages.
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -70,9 +64,94 @@ LESSONS LEARNED
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
-yyyy-mm-dd
+2018-01-01
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Raunak :: Started the inheritance tree for Helper.
 ==============================================================
+
+2018-01-02
+--------------------------------------------------------------
+Bill :: Worked on proposal.
+Raunak :: Worked on proposal.
+Maggie :: Worked on proposal.
+==============================================================
+
+2018-01-03
+--------------------------------------------------------------
+Bill :: First mvp- "clicking" functionality established and gold animation. Worked on UML.
+Raunak :: Worked on UML. Enabled gold functionality for Miner and Engineer. Created constructors for helper classes.
+Maggie :: Worked on UML. Created devlog.
+==============================================================
+
+2018-01-04
+--------------------------------------------------------------
+Bill :: Finished UML and modified proposal.
+Raunak :: Finished UML and modified proposal. Added luck and overloaded constructors.
+Maggie :: Finished UML and modified proposal. Created README.
+==============================================================
+
+2018-01-05
+--------------------------------------------------------------
+Bill :: Added introUI- for the first 30 gold created by pressing [space][enter], an introductory screen is shown with ASCII art.
+Raunak :: Add and multi variables for Miner and Engineer.
+Maggie :: <Thing member did.>
+==============================================================
+
+2018-01-06
+--------------------------------------------------------------
+Bill :: Moved text for UI into a separate class to declutter Woo.java.
+==============================================================
+
+2018-01-07
+--------------------------------------------------------------
+Raunak :: Made UML diagram to go with the descriptions.
+==============================================================
+
+2018-01-08
+--------------------------------------------------------------
+Bill :: <Thing member did.>
+Raunak :: Put all 3 buy {helper} methods into one buy method to stop algorithms from running in a loop.
+Maggie :: Updated README to include general description of the project and instruct user how to play the game (the core functionality of the major key presses). Made sure Woo.java was compilable and runnable (although the only working function was gold production per key press).
+==============================================================
+
+2018-01-09
+--------------------------------------------------------------
+Bill :: Troubleshooting errors in Store.java
+Raunak :: Created flowchart. Brought Store's buy() method up to compatibility with DatStorage.
+Maggie :: Created todo list. Finished up DataStorage.java in compliance with the UML.
+==============================================================
+
+2018-01-10
+--------------------------------------------------------------
+Bill :: Added time mechanism. Finished up StoreUI. Updated tapMech().
+Raunak :: Added accessor for luck.
+Maggie :: Fixed DataStorage and addx methods.
+==============================================================
+
+2018-01-11
+--------------------------------------------------------------
+Bill :: Rewrote DataStorage.java and set limit of helpers to 5.
+Raunak :: Began work on upgrade functionality. 
+Maggie :: Added Store flowchart. Edited buying process.
+==============================================================
+
+2018-01-14
+--------------------------------------------------------------
+Bill :: Bug fixing.
+Maggie :: New method to kill helpers in unlucky events. Began events and messages.
+==============================================================
+
+2018-01-15
+--------------------------------------------------------------
+Raunak :: Updated todo list. Added upgrading functionality.
+Maggie :: Wrote flowcharts for Events, Database & Inventory. Finished Events.java and implemented into main program.
+==============================================================
+
+
+2018-01-16
+--------------------------------------------------------------
+Bill :: Created inventoryUI.
+Raunak :: Finished writing and implemented powerups with cooldowns. Wrote flow chart for powerups.
+Maggie :: Reworked sorting algorithms and implemented into main program.
+==============================================================
+

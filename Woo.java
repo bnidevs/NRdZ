@@ -251,15 +251,15 @@ public static void improveMech() {
         keyPress = Keyboard.readString();
         //for gamblers
         if ( keyPress.equals("G") || keyPress.equals("g") ) {
-                UserInterface.improveUIG(data.gamblerList());
+                System.out.println( UserInterface.improveUIG(data.gamblerList()) );
         }
         //for miners
         else if ( keyPress.equals("M") || keyPress.equals("m") ) {
-                UserInterface.improveUIM(data.minerList());
+                System.out.println( UserInterface.improveUIM(data.minerList()) );
         }
         //for engineers
         else if ( keyPress.equals("E") || keyPress.equals("e") ) {
-                UserInterface.improveUIE(data.engineerList());
+                System.out.println( UserInterface.improveUIE(data.engineerList()) );
         }
         // return to main screen
         else if ( keyPress.equals("R") || keyPress.equals("r") ) {

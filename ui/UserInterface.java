@@ -165,10 +165,10 @@ public static void storeUIMsg(String minerStr, String engineerStr, String gamble
 
 public static String improveUIM(ArrayList<Miner> inArr){
 								int amtNL = 12;
-								String x = "[R]eturn\n[M]iners\n[E]ngineers\n[G]amblers\n\n" + "Name                    Level                    Gold Per Second         Upgrade\n\n";
+								String x = "[R]eturn\n[M]iners\n[E]ngineers\n[G]amblers\n\n" + "Name                    Level        Upgrade\n\n";
 								for (Miner h : inArr) {
 																if (h.bought()) {
-																								String[] lineArr = {h.name(), h.level() + "", (h.level() * 3) + "", h.upgrade()};
+																								String[] lineArr = {h.name(), h.level() + "", h.upgrade()};
 																								x += TerminalTxtProcessing.lineCenter(1, lineArr);
 																								x += "\n";
 																								amtNL -= 1;
@@ -179,8 +179,10 @@ public static String improveUIM(ArrayList<Miner> inArr){
 }
 
 public static String improveUIE(ArrayList<Engineer> inArr){
+								return "";
 }
 
 public static String improveUIG(ArrayList<Gambler> inArr){
+								return "";
 }
 }//end class UserInterface

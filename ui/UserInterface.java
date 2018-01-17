@@ -166,7 +166,7 @@ public static void storeUIMsg(String minerStr, String engineerStr, String gamble
 public static String improveUIM(ArrayList<Miner> inArr){
 								String x = "";
 								int amtNL = 12;
-								x = "[R]eturn\n\n[M]iners\n\n[E]ngineers\n\n[G]amblers\n\n" + "Name                    Level\t\t              Upgrade\n\n";
+								x = "[R]eturn\n\n[M]iners\n\n[E]ngineers\n\n[G]amblers\n\n" + "Name                    Level\t              Upgrade\n\n";
 								int n = 0; //use to keep track ofwhat keys to push
 								for (Miner h : inArr) {
 																if (h.bought()) {
@@ -200,6 +200,20 @@ public static String improveUIE(ArrayList<Engineer> inArr){
 }
 
 public static String improveUIG(ArrayList<Gambler> inArr){
-								return "";
+								String x = "";
+								int n = 1; // denote what the user is pressing
+								int amtNL = 12;
+								x = "[R]eturn\n\n[M]iners\n\n[E]ngineers\n\n[G]amblers\n\n" + "Name                                                                     Upgrade\n\n";
+								for (Helper h : inArr) {
+																if (h.bought()) {
+																								String[] lineArr = {h.name(), "[" + n + "] " + h.upgrade()};
+																								x += TerminalTxtProcessing.lineCenter(2, lineArr);
+																								x += "\n";
+																								amtNL -= 1;
+																								n += 1;
+																}
+								}
+								x += TerminalTxtProcessing.textRepeater("\n", amtNL);
+								return x;
 }
 }//end class UserInterface

@@ -278,11 +278,15 @@ public static void improveMech( int mode) {
                 }
                 if (mode == 1) {
                         Store.upgradeEngineer( data.engineerList().get(0) );
-                        improveMech(1);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 if (mode == 2) {
                         Store.upgradeEngineer( data.engineerList().get(0) );
-                        improveMech(2);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
         }
         else if ( keyPress.equals("0") ) {
@@ -295,7 +299,9 @@ public static void improveMech( int mode) {
                 }
                 else  {
                         Store.levelEngineer( data.engineerList().get(0) );
-                        improveMech(1);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
         }
         else if ( keyPress.equals("3") ) {
@@ -307,11 +313,15 @@ public static void improveMech( int mode) {
                 }
                 if (mode == 1) {
                         Store.upgradeEngineer( data.engineerList().get(1) );
-                        improveMech(1);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 if (mode == 2) {
                         Store.upgradeGambler( data.gamblerList().get(1) );
-                        improveMech(2);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
 
         }
@@ -324,7 +334,9 @@ public static void improveMech( int mode) {
                 }
                 else  {
                         Store.levelEngineer( data.engineerList().get(1) );
-                        improveMech(1);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
 
         }
@@ -337,11 +349,15 @@ public static void improveMech( int mode) {
                 }
                 if (mode == 1) {
                         Store.upgradeEngineer( data.engineerList().get(2) );
-                        improveMech(1);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 if (mode == 2) {
                         Store.upgradeGambler( data.gamblerList().get(2) );
-                        improveMech(2);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
 
         }
@@ -354,7 +370,9 @@ public static void improveMech( int mode) {
                 }
                 else  {
                         Store.levelEngineer( data.engineerList().get(2) );
-                        improveMech(1);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
 
         }
@@ -367,11 +385,15 @@ public static void improveMech( int mode) {
                 }
                 if (mode == 1) {
                         Store.upgradeEngineer( data.engineerList().get(3) );
-                        improveMech(1);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 if (mode == 2) {
                         Store.upgradeGambler( data.gamblerList().get(3) );
-                        improveMech(2);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
         }
         else if ( keyPress.equals("6")) {
@@ -383,7 +405,9 @@ public static void improveMech( int mode) {
                 }
                 else  {
                         Store.levelEngineer( data.engineerList().get(3) );
-                        improveMech(1);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
 
         }
@@ -396,11 +420,15 @@ public static void improveMech( int mode) {
                 }
                 if (mode == 1) {
                         Store.upgradeEngineer( data.engineerList().get(4) );
-                        improveMech(1);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
                 if (mode == 2) {
                         Store.upgradeGambler( data.gamblerList().get(4) );
-                        improveMech(2);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
 
         }
@@ -413,7 +441,9 @@ public static void improveMech( int mode) {
                 }
                 else  {
                         Store.levelEngineer( data.engineerList().get(4) );
-                        improveMech(1);
+                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
+                        gameScreen = "main";
+                        tapMech();
                 }
 
         }

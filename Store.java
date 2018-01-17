@@ -29,7 +29,7 @@ public static void levelEngineer( Engineer e ){
 public static void upgradeMiner( Miner m ){
         if ( m.upgrade().equals("0") ) {
                 System.out.print("Choose what upgrade path ");
-                System.out.print( m.name() );
+                System.out.print( m.name() + " " );
                 System.out.println("will take!");
                 System.out.println( "To select one, type either \"add\" or \"multi\"!");
                 String input = Keyboard.readString();
@@ -42,7 +42,7 @@ public static void upgradeMiner( Miner m ){
 public static void upgradeEngineer( Engineer e ){
         if ( e.upgrade().equals("0") ) {
                 System.out.print("Choose what upgrade path ");
-                System.out.print( e.name() );
+                System.out.print( e.name() + " " );
                 System.out.println("will take!");
                 System.out.println( "To select one, type either \"add\" or \"multi\"!");
                 String input = Keyboard.readString();

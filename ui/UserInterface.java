@@ -97,7 +97,14 @@ public static void helpUI(){
 }
 
 public static void storeUI(String minerStr, String engineerStr, String gamblerStr){
-								System.out.println("[R]eturn\n\n[1] Buy a miner : " + minerStr + "\n\n[2] Buy an engineer : " + engineerStr + "\n\n[3] Buy a gambler : " + gamblerStr + "\n\n[4] Dynamite (doubles miner production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[5] Power Surge (doubles engineer production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[6] Extra Chips (doubles gambler odds)  : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[7] QAFee (doubles everything) : 2500 gold\n\t30 sec duration : 5 min cooldown\n\n\n\n");
+								System.out.println("[R]eturn\n\n[1] Buy a miner : " + minerStr +
+																											"\n\n[2] Buy an engineer : " + engineerStr +
+																											"\n\n[3] Buy a gambler : " + gamblerStr +
+																											"\n\n[4] Dynamite (doubles miner production) : 400 gold\n\t30 sec duration : 1 min cooldown"+
+																											"\n\n[5] Power Surge (doubles engineer production) : 400 gold\n\t30 sec duration : 1 min cooldown" +
+																											"\n\n[6] Extra Chips (doubles gambler odds)  : 400 gold\n\t30 sec duration : 1 min cooldown" +
+																											"\n\n[7] QAFee (doubles everything) : 2500 gold\n\t30 sec duration : 5 min cooldown" +
+																											"\n\n[8] Level or Upgrade Helpers\n\n");
 }
 
 public static String inventoryUIM(int type, ArrayList<Miner> inArr){
@@ -153,7 +160,7 @@ public static void noGold(String minerStr, String engineerStr, String gamblerStr
 }
 
 public static void storeUIMsg(String minerStr, String engineerStr, String gamblerStr, String msg){
-								System.out.println("[R]eturn\n\n[1] Buy a miner : " + minerStr + "\n\n[2] Buy an engineer : " + engineerStr + "\n\n[3] Buy a gambler : " + gamblerStr + "\n\n[4] Dynamite (doubles miner production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[5] Power Surge (doubles engineer production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[6] Extra Chips (doubles gambler odds)  : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[7] QAFee (doubles everything) : 2500 gold\n\t30 sec duration : 5 min cooldown\n\n\n" + msg + "\n");
+								System.out.println("[R]eturn\n[1] Buy a miner : " + minerStr + "\n\n[2] Buy an engineer : " + engineerStr + "\n\n[3] Buy a gambler : " + gamblerStr + "\n\n[4] Dynamite (doubles miner production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[5] Power Surge (doubles engineer production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[6] Extra Chips (doubles gambler odds)  : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[7] QAFee (doubles everything) : 2500 gold\n\t30 sec duration : 5 min cooldown\n\n[8] Level or Upgrade Helpers\n\n" + msg + "\n");
 }
 
 }//end class UserInterface

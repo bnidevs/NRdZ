@@ -11,6 +11,7 @@ public Worker(){
 
 public Worker(String name, int cost, int level){ //calls the overloaded constructor of Helper
         super(name, cost, level);
+        _upgradeType = "none";
 }
 
 //Note: Individual gold increases will be handled in the subclasses

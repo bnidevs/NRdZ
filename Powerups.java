@@ -6,10 +6,10 @@ private static long startEC;
 private static long startQAF;
 
 //log the end times for each powerup
-private static long endD = 9999999999999l;
-private static long endPS = 9999999999999l;
-private static long endEC = 9999999999999l;
-private static long endQAF = 9999999999999l;
+private static long endD;
+private static long endPS;
+private static long endEC;
+private static long endQAF;
 
 //log the cooldown times for each powerup
 private static long coolD;
@@ -17,12 +17,15 @@ private static long coolPS;
 private static long coolEC;
 private static long coolQAF;
 
+private static int powerupCounter; //tracks the number of powerups done
+
 //activates the Dynamite PowerUp
 public static void activateDynamite(){
         startD = System.currentTimeMillis();
         endD = startD + 30000; //set the end time to 30 seconds after the current time
         coolD = endD + 100000; //set the cooldown time to 1 minute after the end time
         Woo._multiGoldPS *= 2;
+        powerupCounter++;
 }
 
 //activates the PowerSurge powerup
@@ -31,6 +34,7 @@ public static void activatePower(){
         endPS = startPS + 30000; //set the end time to 30 seconds after the current time
         coolPS = endPS + 100000; //set the cooldown time to 1 minute after the end time
         Woo._multiGoldPKP *= 2;
+        powerupCounter++;
 }
 
 //activates Extra Chips
@@ -39,6 +43,7 @@ public static void activateExtra(){
         endEC = startEC + 30000; //set the end time to 30 seconds after the current time
         coolEC = endEC + 100000; //set the cooldown time to 1 minute after the end time
         Woo._luck *= 2;
+        powerupCounter++;
 }
 
 public static void activateQAF(){
@@ -48,28 +53,30 @@ public static void activateQAF(){
         Woo._multiGoldPS *= 2;
         Woo._multiGoldPKP *= 2;
         Woo._luck *= 2;
-
+        powerupCounter++;
 }
 
 public static boolean finishPowerUps(){
         long time = System.currentTimeMillis();
-        if (time >= endD) { //end Dynamite
-                Woo._multiGoldPS /= 2;
-                return true;
-        }
-        if (time >= endPS) { //end Power Surge
-                Woo._multiGoldPKP /= 2;
-                return true;
-        }
-        if (time >= endEC) { //end Extra Chips
-                Woo._luck /= 2;
-                return true;
-        }
-        if (time >= endQAF) { //end QAFee
-                Woo._multiGoldPS /= 2;
-                Woo._multiGoldPKP /= 2;
-                Woo._luck /= 2;
-                return true;
+        if ( powerupCounter > 0 ) {
+                if (time >= endD) { //end Dynamite
+                        Woo._multiGoldPS /= 2;
+                        return true;
+                }
+                if (time >= endPS) { //end Power Surge
+                        Woo._multiGoldPKP /= 2;
+                        return true;
+                }
+                if (time >= endEC) { //end Extra Chips
+                        Woo._luck /= 2;
+                        return true;
+                }
+                if (time >= endQAF) { //end QAFee
+                        Woo._multiGoldPS /= 2;
+                        Woo._multiGoldPKP /= 2;
+                        Woo._luck /= 2;
+                        return true;
+                }
         }
         return false;
 }

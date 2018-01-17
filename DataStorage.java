@@ -9,19 +9,19 @@ public class DataStorage {
     
     // 2-D array with a list of helpers of that type, detailing their names, levels, upgrades, and upgrade type
 
-    private ArrayList<Miner> _miners;
-    private ArrayList<Engineer> _engineers;
-    private ArrayList<Gambler> _gamblers;
+    private ArrayList<Helper> _miners;
+    private ArrayList<Helper> _engineers;
+    private ArrayList<Helper> _gamblers;
 
   
     public DataStorage(){
 	_miners  = new ArrayList<Miner>();
 
-	Miner s = new Miner("Steve", 30, 1);
-	Miner y = new Miner("Yosemite Sam", 75, 10);
-	Miner i = new Miner("Indiana Jones", 150, 20);
-	Miner w = new Miner("Waluigi", 300, 30);
-	Miner t = new Miner("Thorin Oakenshield", 750, 50);
+	Miner s = new Miner("Steve", 50, 1);
+	Miner y = new Miner("Yosemite Sam", 183, 10);
+	Miner i = new Miner("Indiana Jones", 2020, 20);
+	Miner w = new Miner("Waluigi", 1000, 30);
+	Miner t = new Miner("Thorin Oakenshield", 9999, 50);
 
 	_miners.add(s);
 	_miners.add(y);
@@ -59,15 +59,15 @@ public class DataStorage {
 
     }
     // ACCESSORS =============================================      
-    public ArrayList<Miner> minerList(){
+    public ArrayList<Helper> minerList(){
 	   return _miners;
     }
 
-    public ArrayList<Engineer> engineerList(){
+    public ArrayList<Helper> engineerList(){
         return _engineers;
     }
     
-    public ArrayList<Gambler> gamblerList(){
+    public ArrayList<Helper> gamblerList(){
         return _gamblers;
     }
 

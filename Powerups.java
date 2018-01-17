@@ -6,10 +6,10 @@ private static long startEC;
 private static long startQAF;
 
 //log the end times for each powerup
-private static long endD;
-private static long endPS;
-private static long endEC;
-private static long endQAF;
+private static long endD = 9999999999999l;
+private static long endPS = 9999999999999l;
+private static long endEC = 9999999999999l;
+private static long endQAF = 9999999999999l;
 
 //log the cooldown times for each powerup
 private static long coolD;

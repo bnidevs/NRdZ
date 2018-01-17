@@ -266,184 +266,243 @@ public static void improveMech( int mode) {
         }
         // return to main screen
         else if ( keyPress.equals("R") || keyPress.equals("r") ) {
+                UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
                 gameScreen = "main";
                 tapMech();
         }
         else if ( keyPress.equals("1") ) {
-                if (mode == 0) {
-                        Store.upgradeMiner( data.minerList().get(0) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
-                }
-                if (mode == 1) {
-                        Store.upgradeEngineer( data.engineerList().get(0) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
-                }
-                if (mode == 2) {
-                        Store.upgradeEngineer( data.engineerList().get(0) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                if ( 10000 > _gold) {
+                        UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                }else{
+                        if (mode == 0) {
+                                Store.upgradeMiner( data.minerList().get(0) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
+                        if (mode == 1) {
+                                Store.upgradeEngineer( data.engineerList().get(0) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
+                        if (mode == 2) {
+                                Store.upgradeGambler( data.gamblerList().get(0) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
         }
         else if ( keyPress.equals("0") ) {
 
                 if (mode == 0) {
-                        Store.levelMiner( data.minerList().get(0) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                        if ( Math.pow(data.minerList().get(0).level(), 3) > _gold) {
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                        }else{
+                                Store.levelMiner( data.minerList().get(0) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
                 else  {
-                        Store.levelEngineer( data.engineerList().get(0) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                        if ( Math.pow(data.engineerList().get(0).level(), 3) > _gold) {
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                        }else{
+                                Store.levelEngineer( data.engineerList().get(0) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
         }
         else if ( keyPress.equals("3") ) {
-                if (mode == 0) {
-                        Store.upgradeMiner( data.minerList().get(1) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
-                }
-                if (mode == 1) {
-                        Store.upgradeEngineer( data.engineerList().get(1) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
-                }
-                if (mode == 2) {
-                        Store.upgradeGambler( data.gamblerList().get(1) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                if ( 10000 > _gold) {
+                        UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                }else{
+                        if (mode == 0) {
+                                Store.upgradeMiner( data.minerList().get(1) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
+                        if (mode == 1) {
+                                Store.upgradeEngineer( data.engineerList().get(1) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
+                        if (mode == 2) {
+                                Store.upgradeGambler( data.gamblerList().get(1) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
 
         }
         else if ( keyPress.equals("2") ) {
                 if (mode == 0) {
-                        Store.levelMiner( data.minerList().get(1) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                        if ( Math.pow(data.minerList().get(0).level(), 3) > _gold) {
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                        }else{
+                                Store.levelMiner( data.minerList().get(1) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
                 else  {
-                        Store.levelEngineer( data.engineerList().get(1) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                        if ( Math.pow(data.engineerList().get(0).level(), 3) > _gold) {
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                        }else{
+                                Store.levelEngineer( data.engineerList().get(1) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
 
         }
         else if ( keyPress.equals("5")) {
-                if (mode == 0) {
-                        Store.upgradeMiner( data.minerList().get(2) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                if ( 10000 > _gold) {
+                        UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                }else{
+                        if (mode == 0) {
+                                Store.upgradeMiner( data.minerList().get(2) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
+                        if (mode == 1) {
+                                Store.upgradeEngineer( data.engineerList().get(2) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
+                        if (mode == 2) {
+                                Store.upgradeGambler( data.gamblerList().get(2) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
-                if (mode == 1) {
-                        Store.upgradeEngineer( data.engineerList().get(2) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
-                }
-                if (mode == 2) {
-                        Store.upgradeGambler( data.gamblerList().get(2) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
-                }
-
         }
         else if ( keyPress.equals("4")) {
                 if (mode == 0) {
-                        Store.levelMiner( data.minerList().get(2) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                        if ( Math.pow(data.minerList().get(0).level(), 3) > _gold) {
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                        }else{
+                                Store.levelMiner( data.minerList().get(2) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
                 else  {
-                        Store.levelEngineer( data.engineerList().get(2) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                        if ( Math.pow(data.engineerList().get(0).level(), 3) > _gold) {
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                        }else{
+                                Store.levelEngineer( data.engineerList().get(2) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
 
         }
         else if ( keyPress.equals("7")) {
-                if (mode == 0) {
-                        Store.upgradeMiner( data.minerList().get(3) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
-                }
-                if (mode == 1) {
-                        Store.upgradeEngineer( data.engineerList().get(3) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
-                }
-                if (mode == 2) {
-                        Store.upgradeGambler( data.gamblerList().get(3) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                if ( 10000 > _gold) {
+                        UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                }else{
+                        if (mode == 0) {
+                                Store.upgradeMiner( data.minerList().get(3) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
+                        if (mode == 1) {
+                                Store.upgradeEngineer( data.engineerList().get(3) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
+                        if (mode == 2) {
+                                Store.upgradeGambler( data.gamblerList().get(3) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
         }
         else if ( keyPress.equals("6")) {
                 if (mode == 0) {
-                        Store.levelMiner( data.minerList().get(3) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                        if ( Math.pow(data.minerList().get(0).level(), 3) > _gold) {
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                        }else{
+                                Store.levelMiner( data.minerList().get(3) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
                 else  {
-                        Store.levelEngineer( data.engineerList().get(3) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                        if ( Math.pow(data.engineerList().get(0).level(), 3) > _gold) {
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                        }else{
+                                Store.levelEngineer( data.engineerList().get(3) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
 
         }
         else if ( keyPress.equals("9")) {
-                if (mode == 0) {
-                        Store.upgradeMiner( data.minerList().get(4) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                if ( 10000 > _gold) {
+                        UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                }else{
+                        if (mode == 0) {
+                                Store.upgradeMiner( data.minerList().get(4) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
+                        if (mode == 1) {
+                                Store.upgradeEngineer( data.engineerList().get(4) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
+                        if (mode == 2) {
+                                Store.upgradeGambler( data.gamblerList().get(4) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
-                if (mode == 1) {
-                        Store.upgradeEngineer( data.engineerList().get(4) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
-                }
-                if (mode == 2) {
-                        Store.upgradeGambler( data.gamblerList().get(4) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
-                }
-
         }
         else if ( keyPress.equals("8")) {
                 if (mode == 0) {
-                        Store.levelMiner( data.minerList().get(4) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                        if ( Math.pow(data.minerList().get(0).level(), 3) > _gold) {
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                        }else{
+                                Store.levelMiner( data.minerList().get(4) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
                 else  {
-                        Store.levelEngineer( data.engineerList().get(4) );
-                        UserInterface.mainUIpostTut(Woo._gold,Woo._totalGoldPKP,Woo._totalGoldPS);
-                        gameScreen = "main";
-                        tapMech();
+                        if ( Math.pow(data.minerList().get(0).level(), 3) > _gold) {
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Not enough gold!");
+                        }else{
+                                Store.levelEngineer( data.engineerList().get(4) );
+                                UserInterface.storeUIMsg(DataStorage.strCreate(1, data.firstUnbought(1)), DataStorage.strCreate(2, data.firstUnbought(2)), DataStorage.strCreate(3, data.firstUnbought(3)), "Helper successfully improved!");
+                                gameScreen = "store";
+                                tapMech();
+                        }
                 }
 
         }

@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.ArrayList;A
 import helper.Helper;
 import helper.Miner;
 import helper.Worker;
@@ -20,8 +20,8 @@ public class DataStorage {
 	Miner s = new Miner("Steve", 50, 1);
 	Miner y = new Miner("Yosemite Sam", 183, 10);
 	Miner i = new Miner("Indiana Jones", 2020, 20);
-	Miner w = new Miner("Waluigi", 1000, 30);
-	Miner t = new Miner("Thorin Oakenshield", 9999, 50);
+	Miner w = new Miner("Waluigi", 10000, 30);
+	Miner t = new Miner("Thorin Oakenshield", 9999999999, 50);
 
 	_miners.add(s);
 	_miners.add(y);
@@ -31,11 +31,11 @@ public class DataStorage {
 
 	_engineers = new ArrayList<Engineer>();
 
-	Engineer b = new Engineer("Bob the Builder", 30, 1);
-	Engineer to = new Engineer("Torbjörn", 75, 10);
-	Engineer d = new Engineer("Dell Conagher", 150, 20);
-	Engineer l = new Engineer("Lucius Fox", 300, 30);
-	Engineer ts = new Engineer("Tony Stark", 750, 50);
+	Engineer b = new Engineer("Bob the Builder", 35, 1);
+	Engineer to = new Engineer("Torbjörn", 136, 10);
+	Engineer d = new Engineer("Dell Conagher", 1506, 20);
+	Engineer l = new Engineer("Lucius Fox", 5600, 30);
+	Engineer ts = new Engineer("Tony Stark", 9999999999, 50);
 
 	_engineers.add(b);
 	_engineers.add(to);
@@ -45,11 +45,11 @@ public class DataStorage {
 
 	_gamblers = new ArrayList<Gambler>();
 
-	Gambler m = new Gambler("Mr. Monopoly", 30);
-	Gambler a = new Gambler("Alan Garner", 75);
-	Gambler j = new Gambler("James Bond", 150);
-	Gambler da = new Gambler("Danny Ocean", 300);
-	Gambler li = new Gambler("Libratus", 750);
+	Gambler m = new Gambler("Mr. Monopoly", 1000);
+	Gambler a = new Gambler("Alan Garner", 14000);
+	Gambler j = new Gambler("James Bond", 45999);
+	Gambler da = new Gambler("Danny Ocean", 560765);
+	Gambler li = new Gambler("Libratus", 99999999999999);
 
 	_gamblers.add(m);
 	_gamblers.add(a);

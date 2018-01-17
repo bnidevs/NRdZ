@@ -254,16 +254,19 @@ public class Woo {
         if ( keyPress.equals("G") || keyPress.equals("g") ) {
 	    System.out.println( UserInterface.improveUIG(data.gamblerList()) );
 	    mode = 2;
+	    improveMech();
         }
         //for miners
         else if ( keyPress.equals("M") || keyPress.equals("m") ) {
 	    System.out.println( UserInterface.improveUIM(data.minerList()) );
 	    mode = 0;
+	    improveMech();
 	}
         //for engineers
 	else if ( keyPress.equals("E") || keyPress.equals("e") ) {
 	    System.out.println( UserInterface.improveUIE(data.engineerList()) );
 	    mode = 1;
+	    improveMech();
         }
         // return to main screen
         else if ( keyPress.equals("R") || keyPress.equals("r") ) {
@@ -273,104 +276,129 @@ public class Woo {
         else if ( keyPress.equals("1") ) {
 	    if (mode == 0) {
 		Store.upgradeMiner( data.minerList().get(0) ) ;
+		improveMech();
 	    }
 	    if (mode == 1) {
 		Store.upgradeEngineer( data.engineerList().get(0) ) ;
+		improveMech();
 	    }
 	    if (mode == 2) {
 		Store.upgradeEngineer( data.engineerList().get(0) ); 
+		improveMech();
 	    }
         }
         else if ( keyPress.equals("~") ) {
 
 	    if (mode == 0) {
 		Store.levelMiner( data.minerList().get(0) ) ;
-            }
+		improveMech();
+	    }
             else  {
 		Store.levelEngineer( data.engineerList().get(0) ) ;
-            }
+		improveMech();
+	    }
         }
         else if ( keyPress.equals("3") ) {
             if (mode == 0) {
 		Store.upgradeMiner( data.minerList().get(1) ) ;
-            }
+		improveMech();
+	    }
             if (mode == 1) {
 		Store.upgradeEngineer( data.engineerList().get(1) ) ;
-            }
+		improveMech();
+	    }
             if (mode == 2) {
 		Store.upgradeEngineer( data.engineerList().get(1) );	
-            }
+		improveMech();
+	    }
         
         }
         else if ( keyPress.equals("2") ) {
             if (mode == 0) {
                 Store.levelMiner( data.minerList().get(1) ) ;
-            }
+		improveMech();
+	    }
             else  {
                 Store.levelEngineer( data.engineerList().get(1) ) ;
-            }
+		improveMech();
+	    }
 
         }
         else if ( keyPress.equals("5")) {
             if (mode == 0) {
 		Store.upgradeMiner( data.minerList().get(2) ) ;
-            }
+		improveMech();
+	    }
             if (mode == 1) {
 		Store.upgradeEngineer( data.engineerList().get(2) ) ;
-            }
+		improveMech();
+	    }
             if (mode == 2) {
 		Store.upgradeEngineer( data.engineerList().get(2) );	
-            }
+		improveMech();
+	    }
         
         }
         else if ( keyPress.equals("4")) {
             if (mode == 0) {
                 Store.levelMiner( data.minerList().get(2) ) ;
-            }
+		improveMech();
+	    }
             else  {
                 Store.levelEngineer( data.engineerList().get(2) ) ;
-            }
+		improveMech();
+	    }
 
         }
         else if ( keyPress.equals("7")) {
             if (mode == 0) {
 		Store.upgradeMiner( data.minerList().get(3) ) ;
-            }
+		improveMech();
+	    }
             if (mode == 1) {
 		Store.upgradeEngineer( data.engineerList().get(3) ) ;
-            }
+		improveMech();
+	    }
             if (mode == 2) {
 		Store.upgradeEngineer( data.engineerList().get(3) );	
-            }
+		improveMech();
+	    }
         }
         else if ( keyPress.equals("6")) {
             if (mode == 0) {
                 Store.levelMiner( data.minerList().get(3) ) ;
-            }
+		improveMech();
+	    }
             else  {
                 Store.levelEngineer( data.engineerList().get(3) ) ;
-            }
+		improveMech();
+	    }
 
         }
         else if ( keyPress.equals("9")) {
             if (mode == 0) {
 		Store.upgradeMiner( data.minerList().get(4) ) ;
-            }
+		improveMech();
+	    }
             if (mode == 1) {
 		Store.upgradeEngineer( data.engineerList().get(4) ) ;
-            }
+		improveMech();
+	    }
             if (mode == 2) {
 		Store.upgradeEngineer( data.engineerList().get(4) );	
-            }
+		improveMech();
+	    }
         
         }
         else if ( keyPress.equals("8")) {
             if (mode == 0) {
                 Store.levelMiner( data.minerList().get(4) ) ;
-            }
+		improveMech();
+	    }
             else  {
                 Store.levelEngineer( data.engineerList().get(4) ) ;
-            }
+		improveMech();
+	    }
 
         }
         else{

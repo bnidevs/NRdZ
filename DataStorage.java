@@ -9,9 +9,9 @@ public class DataStorage {
     
     // 2-D array with a list of helpers of that type, detailing their names, levels, upgrades, and upgrade type
 
-    protected ArrayList<Miner> _miners;
-    protected ArrayList<Engineer> _engineers;
-    protected ArrayList<Gambler> _gamblers;
+    private ArrayList<Miner> _miners;
+    private ArrayList<Engineer> _engineers;
+    private ArrayList<Gambler> _gamblers;
 
   
     public DataStorage(){

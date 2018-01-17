@@ -1,8 +1,8 @@
 <Team Name (without word "team")>
-<Member Bubbles>
-<Member Buttercup>
-<Member Blossom>
-pd <pd#>
+Bill Ni
+Raunak Chowdhury
+Maggie Zhao
+pd 2
 ---------------------
 <Project>
 

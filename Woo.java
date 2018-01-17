@@ -40,6 +40,7 @@ public class Woo {
 
 		while(status){
 			if(gameScreen.equals("main")){
+			    //			    Events.allLuck(_luck);
 				if(_gold == 30 && tutorialCompleted == false){
 					UserInterface.tutorial();
 					tutorialCompleted = true;
@@ -71,6 +72,7 @@ public class Woo {
 	}
 
 	public static void tapMech(){
+	    Events.allLuck(_luck);
 		_additiveGoldPKP += data.goldProductionUpdate().get(2);
 		_multiGoldPKP += data.goldProductionUpdate().get(3);
 

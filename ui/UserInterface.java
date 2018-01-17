@@ -163,4 +163,24 @@ public static void storeUIMsg(String minerStr, String engineerStr, String gamble
 								System.out.println("[R]eturn\n[1] Buy a miner : " + minerStr + "\n\n[2] Buy an engineer : " + engineerStr + "\n\n[3] Buy a gambler : " + gamblerStr + "\n\n[4] Dynamite (doubles miner production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[5] Power Surge (doubles engineer production) : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[6] Extra Chips (doubles gambler odds)  : 400 gold\n\t30 sec duration : 1 min cooldown\n\n[7] QAFee (doubles everything) : 2500 gold\n\t30 sec duration : 5 min cooldown\n\n[8] Level or Upgrade Helpers\n\n" + msg + "\n");
 }
 
+public static String improveUIM(ArrayList<Miner> inArr){
+								int amtNL = 12;
+								String x = "[R]eturn\n[M]iners\n[E]ngineers\n[G]amblers\n\n" + "Name                    Level                    Gold Per Second         Upgrade\n\n";
+								for (Miner h : inArr) {
+																if (h.bought()) {
+																								String[] lineArr = {h.name(), h.level() + "", (h.level() * 3) + "", h.upgrade()};
+																								x += TerminalTxtProcessing.lineCenter(1, lineArr);
+																								x += "\n";
+																								amtNL -= 1;
+																}
+								}
+								x += TerminalTxtProcessing.textRepeater("\n", amtNL);
+								return x;
+}
+
+public static String improveUIE(ArrayList<Engineer> inArr){
+}
+
+public static String improveUIG(ArrayList<Gambler> inArr){
+}
 }//end class UserInterface

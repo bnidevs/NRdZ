@@ -75,11 +75,11 @@ public class DataStorage {
         _miners = m;
     }
 
-    public void engineerEdit(ArrayList<Miner> e){
+    public void engineerEdit(ArrayList<Engineer> e){
         _engineers = e;
     }
 
-    public void gamblerEdit(ArrayList<Miner> g){
+    public void gamblerEdit(ArrayList<Gambler> g){
         _gamblers = g;
     }
     

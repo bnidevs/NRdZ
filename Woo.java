@@ -101,21 +101,21 @@ public class Woo {
 		}else if (keyPress.equals("I") || keyPress.equals("i")){
 			gameScreen = "inventory";
 		}else if (keyPress.equals("N") || keyPress.equals("n")){ //name
-			data.minerEdit(sortList(data.minerList(), 0));
-			data.engineerEdit(sortList(data.gamblerList(), 0));
-			data.gamblerEdit(sortList(data.engineerList(), 0));
+			data.minerEdit(DataStorage.sortList(data.minerList(), 0));
+			data.engineerEdit(DataStorage.sortList(data.gamblerList(), 0));
+			data.gamblerEdit(DataStorage.sortList(data.engineerList(), 0));
 		}else if (keyPress.equals("V") || keyPress.equals("v")){ //value
-			data.minerEdit(sortList(data.minerList(), 2));
-			data.engineerEdit(sortList(data.gamblerList(), 2));
-			data.gamblerEdit(sortList(data.engineerList(), 2));
+			data.minerEdit(DataStorage.sortList(data.minerList(), 2));
+			data.engineerEdit(DataStorage.sortList(data.gamblerList(), 2));
+			data.gamblerEdit(DataStorage.sortList(data.engineerList(), 2));
 		}else if (keyPress.equals("L") || keyPress.equals("l")){ //level
-			data.minerEdit(sortList(data.minerList(), 1));
-			data.engineerEdit(sortList(data.gamblerList(), 1));
-			data.gamblerEdit(sortList(data.engineerList(), 1));
+			data.minerEdit(DataStorage.sortList(data.minerList(), 1));
+			data.engineerEdit(DataStorage.sortList(data.gamblerList(), 1));
+			data.gamblerEdit(DataStorage.sortList(data.engineerList(), 1));
 		}else if (keyPress.equals("U") || keyPress.equals("u")){ //upgrade tier
-			data.minerEdit(sortList(data.minerList(), 3));
-			data.engineerEdit(sortList(data.gamblerList(), 3));
-			data.gamblerEdit(sortList(data.engineerList(), 3));
+			data.minerEdit(DataStorage.sortList(data.minerList(), 3));
+			data.engineerEdit(DataStorage.sortList(data.gamblerList(), 3));
+			data.gamblerEdit(DataStorage.sortList(data.engineerList(), 3));
 		}else if (keyPress.equals("E") || keyPress.equals("e")){ //display engineers
 			inventoryType = 2;
 		}else if (keyPress.equals("M") || keyPress.equals("m")){ //display miners

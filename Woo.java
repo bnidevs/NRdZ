@@ -237,9 +237,20 @@ public class Woo {
 	    }
 	}
 
+    else if (keyPress.equals("8")) {
+	improveMech();
+
+    }	
+    }
+
+    public static void improveMech() {
+	keyPress = Keyboard.readString();	
+	if (keyPress.equals(" ")) {
+	}
+    
+    } //end improveMech
 	_additiveGoldPKP = 1;
 	_additiveGoldPS = 0;
 	_luck = 0.0005;
-    }
 
 }
